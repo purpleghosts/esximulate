@@ -1,0 +1,58 @@
+{
+   "task": {
+      "task": "Task",
+      "entity": "Target",
+      "queued": "Queued",
+      "started": "Started",
+      "completed": "Completed",
+      "initiator": "Initiator",
+      "result": "Result",
+      "state": {
+         "running": "Running...",
+         "success": "Completed successfully",
+         "successful": "Completed successfully",
+         "error": "Failed"
+      },
+      "actionBar": {
+         "refresh": {
+            "label": "Refresh",
+            "tooltip": "Refresh the tasks table"
+         },
+         "actions": {
+            "label": "Actions",
+            "tooltip": "Actions for the object related to the selected task"
+         }
+      },
+      "fetch": {
+         "error": "Failed to retrieve tasks. Check health of host and reload browser."
+      },
+      "pseudo": {
+         "vmrc": {
+            "download": {
+               "label": "Download VMRC",
+               "summary": "Download VMware Remote Console installer"
+            }
+         },
+         "certificate": {
+            "upload": {
+               "label": "Replace host certificate",
+               "summary": "Replace the host's SSL certificate"
+            }
+         },
+         "file": {
+            "upload": {
+               "label": "Upload file to datastore",
+               "summary": "Upload a file to a datastore",
+               "cancelled": "Upload file cancelled"
+            }
+         },
+         "disk": {
+            "upload": {
+               "label": "Upload disk",
+               "summary": "Upload a disk for a virtual machine",
+               "cancelled": "Upload disk cancelled"
+            }
+         }
+      }
+   }
+}
