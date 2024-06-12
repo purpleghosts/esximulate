@@ -1,0 +1,58 @@
+{
+   "task": {
+      "task": "Tarea",
+      "entity": "Destino",
+      "queued": "En cola",
+      "started": "Iniciado",
+      "completed": "Completado",
+      "initiator": "Iniciador",
+      "result": "Resultado",
+      "state": {
+         "running": "En ejecución...",
+         "success": "Se completó correctamente.",
+         "successful": "Se completó correctamente",
+         "error": "Error"
+      },
+      "actionBar": {
+         "refresh": {
+            "label": "Actualizar",
+            "tooltip": "Actualizar la tabla de tareas"
+         },
+         "actions": {
+            "label": "Acciones",
+            "tooltip": "Acciones del objeto relacionado con la tarea seleccionada"
+         }
+      },
+      "fetch": {
+         "error": "No se pudieron recuperar las tareas. Compruebe el estado del host y vuelva a cargar el explorador."
+      },
+      "pseudo": {
+         "vmrc": {
+            "download": {
+               "label": "Descargar VMRC",
+               "summary": "Descargar el instalador de VMware Remote Console"
+            }
+         },
+         "certificate": {
+            "upload": {
+               "label": "Reemplazar certificado de host",
+               "summary": "Reemplazar el certificado SSL del host"
+            }
+         },
+         "file": {
+            "upload": {
+               "label": "Cargar archivo en almacén de datos",
+               "summary": "Cargar un archivo en un almacén de datos",
+               "cancelled": "Carga de archivo cancelada"
+            }
+         },
+         "disk": {
+            "upload": {
+               "label": "Cargar disco",
+               "summary": "Cargar un disco para una máquina virtual",
+               "cancelled": "Carga de disco cancelada"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,144 @@
+<div class="loginContainer"
+     ng-class="{ 'has-welcome-message' : welcome !== null && !loggingIn && !initializing, 'has-terms-accepted-state' : (accepted && !termsNotAccepted) && !loggingIn }">
+
+   <div id="welcomeBackgroundPatternBackground">
+      <div id="welcomeBackgroundPattern" ng-class="{ 'authenticating': loggingIn }"></div>
+   </div>
+
+   <div class="login-logo-layout">
+
+      <i class="esx-logo esx-logo-medium" aria-label="{{ 'root.client' | translate }}"></i>
+      <i class="vmware-corp-logo vmware-corp-logo-medium loginContainer-logo"
+         aria-label="{{ 'root.title' | translate }}"></i>
+      <div class="login-logo-layout-clientNameField">{{'root.client' | translate}}&trade;</div>
+
+
+   </div>
+
+
+   <div ng-if="loggingIn" class="server-authentication-progress-layout">
+      <section>
+         <div aria-live="polite" class="loading-content"></div>
+         <div class="loading-text" ng-bind-html="status | escapeHtml | linebreak"></div>
+      </section>
+   </div>
+
+   <form name="loginForm" ng-submit="login(credentials)" novalidate>
+
+      <div id="loginForm" ng-show="!loggingIn && !initializing">
+
+         <div class="loginRow" ng-show="devmode">
+            <label id="host-label" class="loginLabel">
+               <input id="hostname"
+                      ng-disabled="!devmode"
+                      autocomplete="off"
+                      spellcheck="false"
+                      aria-labelledby="host-label"
+                      tabindex="1"
+                      ng-attr-placeholder="{{ 'login.host' | translate }}"
+                      ng-disabled="loggingIn"
+                      type="text"
+                      ng-model="credentials.hostname"
+                      ng-model-options="{ updateOn: 'blur' }"/>
+            </label>
+         </div>
+
+         <div class="loginRow">
+            <label id="username-label" class="loginLabel">
+               <input id="username"
+                      aria-labelledby="username-label"
+                      tabindex="2"
+                      focus-me="true"
+                      ng-attr-placeholder="{{ 'login.username' | translate }}"
+                      ng-disabled="loggingIn"
+                      ng-required="true"
+                      ng-class="{loginFailed: loginFailed}"
+                      type="text"
+                      spellcheck="false"
+                      ng-model="credentials.username"/>
+            </label>
+         </div>
+
+         <div class="loginRow">
+            <label id="password-label" class="loginLabel">
+               <input id="password"
+                      autocomplete="off"
+                      aria-labelledby="password-label"
+                      tabindex="3"
+                      ng-attr-placeholder="{{ 'login.password' | translate }}"
+                      ng-disabled="loggingIn"
+                      ng-required="true"
+                      ng-class="{loginFailed: loginFailed}"
+                      type="password"
+                      ng-model="credentials.password"/>
+            </label>
+         </div>
+
+
+         <!-- response: session time out: loginAlert -->
+         <!-- response: terms of service use case not accepted, or login rejected: loginFailed -->
+         <div class="loginRow" ng-if="status !== null && !loggingIn">
+            <div ng-if="status !== null" class="loginStatus"
+                 ng-class="{loginFailed: loginFailed || termsNotAccepted, loginAlert: !(loginFailed || termsNotAccepted) }"
+                 style="padding: 1rem; margin-bottom: 2rem">
+               <div class="loginStatusIcon"
+                    ng-class="{ 'esx-icon-error': loginFailed || termsNotAccepted, 'esx-icon-warning': !(loginFailed || termsNotAccepted) }"></div>
+               <div class="login-status-content" ng-bind-html="status | escapeHtml | linebreak"></div>
+            </div>
+         </div>
+
+         <p class="loginRow">&nbsp;</p>
+
+         <div id="loginButtonRow" class="loginRow">
+            <button data-test-id="login-action-button" type="submit" class="btn btn-primary"
+                    ng-disabled="!credentials.username || loggingIn">
+               {{'root.logIn' | translate}}
+            </button>
+         </div>
+
+
+      </div>
+
+      <div id="welcomeBannerContainer"
+           ng-style="{ 'margin-top': 'max(' + (logoImage ? - (jq('#welcomeLogoImage').height()) : 0 ) + 'px' + ', -320px)' }">
+
+         <img
+            ng-attr-hidden="{{ logoImage ? undefined : true }}"
+            src="{{ logoImage.src}}"
+            id="welcomeLogoImage"
+            ng-class="{
+               'logo-align-left'  : logoImage.align === 'left',
+               'logo-align-center': logoImage.align === 'center',
+               'logo-align-right' : logoImage.align === 'right'
+            }"
+            width="{{ logoImage.width || 'auto'}}"
+            height="{{ logoImage.height || 'auto'}}"
+
+            ng-attr-title="{{ logoImage.title || undefined }}"
+            draggable="false"/>
+
+         <!-- welcome customized message -->
+         <div ng-show="welcome !== null && !loggingIn && !initializing" class="loginWelcome">
+            <div ng-bind-html="welcome | escapeHtml | markdownLite | linebreak"></div>
+         </div>
+         <!-- don't scroll to see acceptance checkbox -->
+         <div ng-show="welcome !== null && !loggingIn && !initializing && accept !== null"
+              class="acceptMessageContainer">
+            <label class="label-508"><input type="checkbox" class="form-control inline" tabindex="4"
+                                            ng-model="accepted"/><span
+               ng-bind="accept" class="accept-label"></span></label>
+
+         </div>
+
+      </div>
+
+
+   </form>
+
+   <div id="footer" class="footer" ng-show="!loggingIn && !initializing">
+      <a href="https://www.vmware.com/{{'links.language' | translate}}/support/pubs/" target="_blank">
+         <i class="esx-icon-help-new-window"></i>{{'general.openDocumentation' | translate}}</a>
+      <div class="right">{{ hostInfo }}</div>
+   </div>
+
+</div>

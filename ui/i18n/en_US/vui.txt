@@ -1,0 +1,90 @@
+{
+   "vui": {
+      "ok": "OK",
+      "back": "Back",
+      "next": "Next",
+      "finish": "Finish",
+      "cancel": "Cancel",
+      "reset": "Reset",
+      "filter": "Filter",
+      "of": "of",
+      "item": "item",
+      "items": "items",
+      "actionsMenu": {
+         "empty": "No Actions Available"
+      },
+      "datagrid": {
+         "emptyTable": "No items to display",
+         "zeroRecords": "No matching records found",
+         "colFilterInfo": "Show items with value that",
+         "colFilterBooleanInfo": "Show items with value that is",
+         "filter": "Filter",
+         "clear": "Clear",
+         "isTrue": "True",
+         "isFalse": "False",
+         "and": "And",
+         "or": "Or",
+         "contains": "Contains",
+         "eq": "Is equal to",
+         "neq": "Is not equal to",
+         "gte": "Greater than or equal",
+         "gt": "Greater than",
+         "lte": "Less than or equal",
+         "lt": "Less than",
+         "item": "item",
+         "items": "items",
+         "save": "Apply changes"
+      },
+      "notification": {
+         "defaultTitle": "Notification"
+      }
+   },
+   "ui": {
+      "preference": {
+         "label": "UI Preferences",
+         "theme": {
+            "label": "Theme",
+            "list" : {
+               "default": "Select a theme"
+            },
+            "mode": {
+               "classic": "Classic",
+               "light": "Light",
+               "dark": "Dark"
+            },
+            "configuration" : {
+               "variable": {
+                  "theme-mode" : "Designate if icons conform to a 'light' or 'dark' style",
+                  "foreground-text-color" : "Primary displayed text",
+                  "foreground-reverse-color" : "Form control inputs and also reversed text color",
+                  "foreground-highlight-color" : "Emphasis and highlights for text",
+                  "foreground-link-color" : "Hyperlink and selected tab",
+                  "form-accessibility-color" : "Form and accessibility focus",
+                  "item-selected-color" : "User item selection",
+                  "layout-panel-color" : "Common color shading for all layout panels",
+                  "layout-scroll-color" : "Scrollbar tracking color",
+                  "background-menu-color" : "Background color for drop-down menus",
+                  "background-color-1" : "Top gradient color of application background frame",
+                  "background-color-2" : "Bottom gradient color of application background frame"
+               }
+            },
+            "action": {
+               "editor" : "Customize..."
+            },
+            "dialog" : {
+               "title" : "Customize user theme",
+               "field" : {
+                  "name" : "Theme name"
+               },
+               "warning" : "Altering theme variables may result in unreadable text.",
+               "tooltip" : {
+                  "attribute": {
+                     "variable": "Color variable",
+                     "opacity": "Opacity"
+                  }
+               }
+            }
+         }
+      }
+   }
+}

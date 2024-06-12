@@ -1,0 +1,1367 @@
+{
+   "network": {
+      "title": "{{hostname}} - Networking",
+      "context": {
+         "title": "Networking",
+         "addPortgroup": {
+            "title": "Add port group",
+            "tooltip": "Add a new portgroup"
+         },
+         "addVSwitch": {
+            "title": "Add standard vSwitch",
+            "tooltip": "Add a standard virtual switch"
+         },
+         "addVMKNIC": {
+            "title": "Add VMkernel NIC",
+            "tooltip": "Add a VMkernel interface"
+         }
+      },
+      "tabs": {
+         "vswitches": {
+            "title": "Virtual switches",
+            "toolTip": "Manage the hosts's virtual switches"
+         },
+         "portgroups": {
+            "title": "Port groups",
+            "toolTip": "Manage the host's switch portgroups"
+         },
+         "pnics": {
+            "title": "Physical NICs",
+            "toolTip": "Manage the host's physical NICs"
+         },
+         "vmknics": {
+            "title": "VMkernel NICs",
+            "toolTip": "Manage the host's VMkernel NICs"
+         },
+         "netstacks": {
+            "title": "TCP/IP stacks",
+            "toolTip": "Manage the host's TCP/IP stacks"
+         },
+         "firewall": {
+            "title": "Firewall rules",
+            "toolTip": "Manage firewall rules"
+         }
+      },
+      "monitor": {
+         "events": {
+            "tabTitle": "Events",
+            "tabTooltip": "System events"
+         },
+         "tasks": {
+            "tabTitle": "Tasks",
+            "tabTooltip": "Tasks"
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "Permissions",
+            "title": "Manage Permissions",
+            "close": "Close",
+            "cancel": "Cancel",
+            "noUsers": "No users",
+            "addUser": {
+               "label": "Add User",
+               "toolTip": "Add a user"
+            },
+            "removeUser": {
+               "label": "Remove User",
+               "toolTip": "Remove a user"
+            },
+            "assignRole": {
+               "label": "Assign Role",
+               "toolTip": "Assign a role to a user"
+            },
+            "updatePermissions": {
+               "successNotification": "Successfully updated permissions",
+               "failureNotification": "Failed to updated permissions: {{error}}"
+            },
+            "columns": {
+               "user": "User",
+               "role": "Role"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "Select a user"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "Select a role"
+            },
+            "propagateLabel": "Propagate to all children"
+         }
+      },
+      "firewall": {
+         "alt": "Firewall",
+         "list": {
+            "columns": {
+               "name": "Name",
+               "key": "Key",
+               "incoming": "Incoming Ports",
+               "outgoing": "Outgoing Ports",
+               "protocols": "Protocols",
+               "daemon": "Daemon",
+               "service": "Service"
+            },
+            "actionBar": {
+               "edit": {
+                  "label": "Edit settings",
+                  "tooltip": "Edit the settings for this ruleset"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for the selected firewall ruleset"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the firewall rules"
+               }
+            },
+            "unknownRule": "Unknown FirewallRule",
+            "rule": "Rule",
+            "direction": "Direction",
+            "port": "Port",
+            "protocol": "Protocol",
+            "notification": {
+               "enable": {
+                  "success": "{{name}} ruleset was successfuly enabled.",
+                  "error": "Failed to enable {{name}} ruleset."
+               },
+               "disable": {
+                  "success": "{{name}} ruleset was successfuly disabled.",
+                  "error": "Failed to disable {{name}} ruleset."
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "Edit settings",
+               "tooltip": "Edit this firewall rule"
+            },
+            "enable": {
+               "label": "Enable",
+               "tooltip": "Enable this firewall rule"
+            },
+            "disable": {
+               "label": "Disable",
+               "tooltip": "Disable this firewall rule"
+            },
+            "service": {
+               "label": "Service",
+               "tooltip": "Modify settings for the service associated with this firewall rule"
+            },
+            "policy": {
+               "label": "Policy",
+               "tooltip": "Policy options for the service assocaited with this firewall rule"
+            }
+         },
+         "summary": {
+            "key": "Key",
+            "enabled": "Enabled",
+            "true": "Yes",
+            "false": "No",
+            "required": "Required",
+            "rules": "Rules",
+            "package": "Package Information",
+            "allowedIP": "Allowed IP Addresses",
+            "all": "All",
+            "service": "Service",
+            "portlets": {
+               "rules": {
+                  "title": "Firewall rules",
+                  "tooltip": "Firewall rules"
+               }
+            }
+         },
+         "edit": {
+            "title": "Firewall Settings",
+            "header": "Allowed IP Addresses",
+            "allIP": "All connections from all IP addresses",
+            "selectedIP": "Only allow connections from the following networks:",
+            "selectedIPInfo": "Select each network with a comma.<br/>Example:<br/>192.168.0.0/24, 192.168.1.2, 2001::1/64, fd3e:29a6:0a81:e478::/64",
+            "ok": "OK",
+            "rejectLabel": "Cancel",
+            "invalidIP": "Please provide a valid IP address"
+         }
+      },
+      "vmknic": {
+         "alt": "VMkernel NIC",
+         "select": {
+            "title": "Select a VMkernel interface",
+            "rejectLabel": "Cancel",
+            "confirmLabel": "Select"
+         },
+         "summary": {
+            "virtualSwitch": "Virtual switch:",
+            "portGroup": "Port group:",
+            "tcpIpConfiguration": "TCP/IP configuration",
+            "vswitchTopology": "vSwitch topology",
+            "services": "Services",
+            "unknownVMKNIC": "Unknown VMkernel NIC",
+            "ok": "OK",
+            "portlets": {
+               "tcpip": {
+                  "netstack": "TCP/IP stack",
+                  "ipv4DHCP": {
+                     "title": "IPv4 DHCP",
+                     "enabled": "Enabled",
+                     "disabled": "Disabled"
+                  },
+                  "ipv4Address": "IPv4 address",
+                  "ipv4Subnet": "IPv4 subnet",
+                  "ipv6DHCP": {
+                     "title": "IPv6 DHCP",
+                     "enabled": "Enabled",
+                     "disabled": "Disabled"
+                  },
+                  "ipv6AutoConfig": {
+                     "title": "IPv6 auto-configuration",
+                     "enabled": "Enabled",
+                     "disabled": "Disabled"
+                  },
+                  "ipv6Addresses": "IPv6 addresses",
+                  "none": "None"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the data for this VMkernel NIC"
+               },
+               "editSettings": {
+                  "label": "Edit settings",
+                  "tooltip": "Edit the settings for this VMkernel NIC"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for this VMkernel NIC"
+               }
+            }
+         },
+         "events": {
+            "type": "Type:",
+            "time": "Time:",
+            "virtualMachine": "Virtual machine:"
+         },
+         "list": {
+            "grid": {
+               "name": "Name",
+               "portgroup": "Portgroup",
+               "tcpip": "TCP/IP stack",
+               "services": "Services",
+               "ipv4": "IPv4 address",
+               "ipv6": "IPv6 addresses",
+               "none": "None"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the adapters table"
+               },
+               "add": {
+                  "label": "Add VMkernel NIC",
+                  "tooltip": "Add a VMkernel NIC - under construction"
+               },
+               "editSettings": {
+                  "label": "Edit settings",
+                  "tooltip": "Edit the settings for this VMkernel NIC"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for this VMkernel NIC"
+               }
+            }
+         },
+         "monitor": {
+            "title": "Monitor",
+            "tabs": {
+               "events": {
+                  "label": "Events",
+                  "tooltip": "Events"
+               },
+               "tasks": {
+                  "label": "Tasks",
+                  "tooltip": "Tasks"
+               }
+            }
+         },
+         "add": {
+            "title": "Add VMkernel NIC",
+            "rejectLabel": "Cancel",
+            "ip": {
+               "ipv4": "IPv4 only",
+               "ipv6": "IPv6 only",
+               "both": "IPv4 and IPv6"
+            },
+            "vswitch": {
+               "label": "Select a virtual switch"
+            },
+            "dialog": {
+               "create": "Create",
+               "validation": {
+                  "nic": "Please provide a name for the new port group",
+                  "vswitch": "Please select a virtual switch for the port group",
+                  "vlanId": "Please provide a VLAN ID, the value must be between {{min}} and {{max}}",
+                  "ipv4": "Please provide an IPv4 address and subnet",
+                  "portgroupExists": "A port group with the name {{name}} already exists, choose another name"
+               },
+               "notification": {
+                  "success": "VMkernel NIC {{name}} was successfully created",
+                  "error": "Failed to create new VMkernel NIC"
+               }
+            }
+         },
+         "edit": {
+            "title": "Edit settings - {{name}}",
+            "rejectLabel": "Cancel",
+            "confirmLabel": "Save",
+            "ip": {
+               "ipv4": "IPv4 only",
+               "ipv6": "IPv6 only",
+               "both": "IPv4 and IPv6"
+            },
+            "vswitch": {
+               "label": "Select a virtual switch"
+            },
+            "dialog": {
+               "create": "Create",
+               "validation": {
+                  "portgroup": "The portgroup associated with this VMkernel NIC does not exist",
+                  "vswitch": "Please select a virtual switch for the port group",
+                  "ipv4": "Please provide an IPv4 address and subnet"
+               },
+               "notification": {
+                  "success": "Configuration for VMkernel NIC {{name}} was saved",
+                  "error": "Failed to save configuration for VMkernel NIC {{name}}"
+               }
+            }
+         },
+         "context": {
+            "remove": {
+               "label": "Remove",
+               "tooltip": "Remove this VMkernel NIC"
+            },
+            "edit": {
+               "label": "Edit settings",
+               "tooltip": "Edit settings for this VMkernel NIC",
+               "tooltipDVS": "Can't edit VMkernel NICs attached to distributed portgroups"
+            }
+         },
+         "remove": {
+            "title": "Remove VMKNIC - {{name}}",
+            "confirmLabel": "Confirm",
+            "rejectLabel": "Cancel",
+            "successNotification": "Successfully removed VMkernel NIC {{name}}",
+            "failureNotification": "Failed to remove VMkernel NIC {{name}}",
+            "confirmation": "Removing a VMkernel NIC makes all services that use it unavailable.\n\nRemove {{name}}?"
+         },
+         "settings": {
+            "services": {
+               "faultToleranceLogging": {
+                  "label": "Fault tolerance logging"
+               },
+               "management": {
+                  "label": "Management"
+               },
+               "nvmeRdma": {
+                  "label": "NVMe/RDMA"
+               },
+               "nvmeTcp": {
+                  "label": "NVMe/TCP"
+                },
+               "ptp": {
+                  "label": "PTP"
+               },
+               "vMotion": {
+                  "label": "vMotion"
+               },
+               "vmotion": {
+                  "label": "vMotion"
+               },
+               "vsan": {
+                  "label": "vSAN"
+               },
+               "vsanWitness": {
+                  "label": "vSAN witness"
+               },
+               "vSphereBackupNFC": {
+                  "label": "NFC backup"
+               },
+               "vSphereProvisioning": {
+                  "label": "Provisioning"
+               },
+               "vSphereReplication": {
+                  "label": "Replication"
+               },
+               "vSphereReplicationNFC": {
+                  "label": "NFC replication"
+               }
+            },
+            "portGroup": {
+               "label": "Port group",
+               "newPortGroup": "New port group",
+               "vlandId": "VLAN ID",
+               "ipVersion": {
+                  "label": "IP version"
+               },
+               "ipv4": {
+                  "label": "IPv4 settings",
+                  "dhcp": {
+                     "label": "Configuration",
+                     "dhcp": "DHCP",
+                     "static": "Static"
+                  },
+                  "address": "Address",
+                  "subnetMask": "Subnet mask"
+               },
+               "ipv6": {
+                  "label": "IPv6 settings",
+                  "clickExpand": "Click to expand",
+                  "dhcpv6": {
+                     "label": "DHCPv6",
+                     "enabled": "Enabled",
+                     "disabled": "Disabled"
+                  },
+                  "autoConfig": {
+                     "label": "Auto-configuration",
+                     "yes": "Yes",
+                     "no": "No"
+                  },
+                  "staticAddresses": {
+                     "label": "Static addresses",
+                     "addAddress": "Add address",
+                     "placeholder": {
+                        "address": "address",
+                        "prefix": "prefix"
+                     }
+                  },
+                  "vSwitch": {
+                     "label": "Virtual switch"
+                  },
+                  "tcpip": {
+                     "label": "TCP/IP stack"
+                  },
+                  "services": {
+                     "label": "Services",
+                     "vMotion": "vMotion"
+                  }
+               }
+            }
+         }
+      },
+      "vswitch": {
+         "alt": "Virtual switch",
+         "context": {
+            "addUplink": {
+               "title": "Add uplink",
+               "tooltip": "Add an uplink to this virtual switch"
+            },
+            "editSettings": {
+               "title": "Edit settings",
+               "tooltip": "Edit settings for this virtual switch"
+            },
+            "remove": {
+               "title": "Remove",
+               "tooltip": "Remove virtual switch",
+               "tooltipDVS": "Removing distributed switches can only be done from vCenter Server"
+            }
+         },
+         "summary": {
+            "type": "Type:",
+            "virtualSwitch": "Virtual switch:",
+            "portGroups": "Port groups:",
+            "uplinks": "Uplinks:",
+            "vswitchDetails": "vSwitch Details",
+            "vswitchTopology": "vSwitch topology",
+            "portlet": {
+               "mtu": "MTU",
+               "ports": "Ports",
+               "link": "Link discovery",
+               "attached": "Attached VMs",
+               "beacon": "Beacon interval",
+               "available": "available",
+               "active": "active",
+               "linkDiscovery": {
+                  "mode": {
+                     "listen": "Listen",
+                     "advertise": "Advertise",
+                     "both": "Both",
+                     "none": "None"
+                  },
+                  "protocol": {
+                     "label": "Protocol",
+                     "lldp": "Link-level discovery protocol (LLDP)",
+                     "cdp": "Cisco discovery protocol (CDP)"
+                  }
+               }
+            },
+            "dialog": {
+               "title": "Unknown vSwitch"
+            },
+            "actionBar": {
+               "addUplink": {
+                  "label": "Add uplink",
+                  "tooltip": "Add a new physical uplink to a virtual switch"
+               },
+               "edit": {
+                  "label": "Edit settings",
+                  "tooltip": "Edit the settings for this virtual switch"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the adapters table"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for selected objects in this list"
+               }
+            }
+         },
+         "list": {
+            "grid": {
+               "name": "Name",
+               "portgroups": "Port groups",
+               "uplinks": "Uplinks",
+               "type": "Type"
+            },
+            "actionBar": {
+               "addStandard": {
+                  "label": "Add standard virtual switch",
+                  "tooltip": "Add a new standard virtual switch"
+               },
+               "addUplink": {
+                  "label": "Add uplink",
+                  "tooltip": "Add an uplink (physical NIC) to this virtual switch"
+               },
+               "edit": {
+                  "label": "Edit settings",
+                  "tooltip": "Edit the settings for this virtual switch"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the list of virtual switches"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for the selected virtual switch"
+               }
+            }
+         },
+         "events": {
+            "type": "Type:",
+            "time": "Time:",
+            "virtualMachine": "Virtual machine:"
+         },
+         "diagram": {
+            "loading": "Loading vSwitch topology...",
+            "noPortgroups": "No portgroups",
+            "vlanId": "VLAN ID:",
+            "virtualMachines": "Virtual Machines",
+            "macAddress": "MAC Address",
+            "vmKernelPorts": "VMkernel ports",
+            "noPhysicalAdapters": "No physical adapters",
+            "physicalAdapters": "Physical adapters"
+         },
+         "monitor": {
+            "title": "Monitor",
+            "tabs": {
+               "events": {
+                  "label": "Events",
+                  "tooltip": "Events"
+               },
+               "tasks": {
+                  "label": "Tasks",
+                  "tooltip": "Tasks"
+               }
+            }
+         },
+         "noAdapters": "There are no free physical adapters to attach to this virtual switch.",
+         "remove": {
+            "title": "Remove virtual switch - {{name}}",
+            "confirmation": "Are you sure you want to remove the following vSwitches?",
+            "confirmLabel": "Yes",
+            "rejectLabel": "No",
+            "portgroups": "port groups",
+            "failureNotification": "Failed to remove virtual switch {{name}}",
+            "successNotification": "Virtual switch {{name}} successfully removed"
+         },
+         "type": {
+            "dvs": "Distributed vSwitch",
+            "standard": "Standard vSwitch"
+         },
+         "add": {
+            "title": "Add standard virtual switch - {{name}}",
+            "titleNoName": "Add standard virtual switch",
+            "newSwitch": "New switch",
+            "confirmLabel": "Add",
+            "rejectLabel": "Cancel",
+            "security": "Security",
+            "clickToExpand": "Click to expand",
+            "promiscuousMode": "Promiscuous mode",
+            "accept": "Accept",
+            "reject": "Reject",
+            "useVswitch": "Inherit from vSwitch",
+            "macChanges": "MAC address changes",
+            "forgedTransmits": "Forged transmits",
+            "linkDiscovery": "Link discovery",
+            "mode": {
+               "label": "Mode",
+               "listen": "Listen",
+               "advertise": "Advertise",
+               "both": "Both",
+               "none": "None"
+            },
+            "protocol": {
+               "label": "Protocol",
+               "lldp": "Link-level discovery protocol (LLDP)",
+               "cdp": "Cisco discovery protocol (CDP)"
+            },
+            "dialog": {
+               "title": "Can't add uplink",
+               "ok": "OK",
+               "create": "Add"
+            },
+            "error": {
+               "name": "Please provide a valid name for the virtual switch",
+               "mtu": "Please provide a valid number for the MTU. The maximum number possible is {{max}}, the minimum number possible is {{min}}"
+            },
+            "notification": {
+               "success": "Virtual switch {{name}} was successfully created",
+               "error": "Failed to create new virtual switch {{name}}"
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for this TCP/IP stack"
+               },
+               "add": {
+                  "label": "Add uplink",
+                  "tooltip": "Add a new physical uplink to a virtual switch"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh this TCP/IP stack"
+               }
+            }
+         },
+         "edit": {
+            "title": "Edit standard virtual switch - {{name}}",
+            "titleNoName": "Edit standard virtual switch",
+            "confirmLabel": "Save",
+            "rejectLabel": "Cancel",
+            "dialog": {
+               "title": "Can't add uplink",
+               "ok": "OK",
+               "create": "Create virtual switch"
+            },
+            "error": {
+               "name": "Please provide a name for the virtual switch",
+               "duplicate": "Please select unique uplink values."
+            },
+            "notification": {
+               "success": "Virtual switch {{name}} was successfully saved",
+               "error": "Failed to save virtual switch {{name}}"
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for this TCP/IP stack"
+               },
+               "add": {
+                  "label": "Add uplink",
+                  "tooltip": "Add a new physical uplink to a virtual switch"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh this TCP/IP stack"
+               }
+            }
+         },
+         "notifications": {
+            "uplink": {
+               "message": "This virtual switch has no uplink redundancy.",
+               "suggested-action": "You should add another uplink adapter."
+            }
+         },
+         "settings": {
+            "vSwitchName": "vSwitch Name",
+            "mtu": "MTU",
+            "uplink": "Uplink"
+         }
+      },
+      "netstack": {
+         "alt": "TCP/IP stack",
+         "names": {
+            "defaultTcpipStack": "Default TCP/IP stack",
+            "vSphereProvisioning": "Provisioning stack",
+            "vmotion": "vMotion stack",
+            "vxlan": "VXLAN"
+         },
+         "summary": {
+            "unknownNetstack": {
+               "title": "Unknown TCP/IP stack"
+            },
+            "key": "Key:",
+            "configuration": "Configuration",
+            "dnsConfiguration": "DNS configuration",
+            "routing": "Routing",
+            "actionBar": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for this TCP/IP stack"
+               },
+               "edit": {
+                  "label": "Edit settings",
+                  "tooltip": "Edit the configuration of this TCP/IP stack"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh this TCP/IP stack"
+               }
+            },
+            "portlets": {
+               "configuration": {
+                  "ipv6": {
+                     "name": "IPv6"
+                  },
+                  "cca": {
+                     "name": "Congestion control algorithm"
+                  },
+                  "maxConnections": {
+                     "name": "Maximum connections"
+                  },
+                  "vmknics": {
+                     "name": "VMkernel NICs"
+                  },
+                  "dhcp": {
+                     "name": "DHCP"
+                  }
+               },
+               "dns": {
+                  "loadingMessage": "Loading DNS configuration...",
+                  "hostName": {
+                     "name": "Host name"
+                  },
+                  "address": {
+                     "name": "Addresses"
+                  },
+                  "domainName": {
+                     "name": "Domain name"
+                  },
+                  "searchDomains": {
+                     "name": "Search domains"
+                  }
+               },
+               "routing": {
+                  "loadingMessage": "Loading routing tables...",
+                  "ipv4": {
+                     "name": "IPv4",
+                     "value": "Click label to expand",
+                     "routeTable": {
+                        "name": "Routing table",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "Network address"
+                              },
+                              "prefixLength": {
+                                 "label": "Prefix length"
+                              },
+                              "gateway": {
+                                 "label": "Gateway"
+                              },
+                              "device": {
+                                 "label": "Device"
+                              }
+                           }
+                        }
+                     }
+                  },
+                  "ipv6": {
+                     "name": "IPv6",
+                     "value": "Click label to expand",
+                     "routeTable": {
+                        "name": "IPv6",
+                        "localSubnet": "Local subnet",
+                        "list": {
+                           "columns": {
+                              "address": {
+                                 "label": "Network address"
+                              },
+                              "prefixLength": {
+                                 "label": "Prefix length"
+                              },
+                              "gateway": {
+                                 "label": "Gateway"
+                              },
+                              "device": {
+                                 "label": "Device"
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         },
+         "events": {
+            "type": "Type:",
+            "time": "Time:",
+            "virtualMachine": "Virtual machine:"
+         },
+         "ipv6": {
+            "true": "Enabled",
+            "false": "Disabled"
+         },
+         "dhcp": {
+            "true": "Enabled",
+            "false": "Disabled"
+         },
+         "list": {
+            "columns": {
+               "name": {
+                  "label": "Name"
+               },
+               "ipv4Gateway": {
+                  "label": "IPv4 gateway"
+               },
+               "ipv6Gateway": {
+                  "label": "IPv6 gateway"
+               },
+               "preferredDNS": {
+                  "label": "Preferred DNS"
+               },
+               "alternateDNS": {
+                  "label": "Alternate DNS"
+               }
+            },
+            "actionBar": {
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for the selected TCP/IP stack"
+               },
+               "edit": {
+                  "label": "Edit settings",
+                  "tooltip": "Edit the settings for this TCP/IP stack"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the TCP/IP stack table"
+               }
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "Edit settings",
+               "tooltip": "Edit the settings for this TCP/IP stack"
+            }
+         },
+         "edit": {
+            "title": "Edit TCP/IP configuration - {{displayName}}",
+            "confirmLabel": "Save",
+            "rejectLabel": "Cancel",
+            "basicConfig": {
+               "label": "Basic DNS configuration",
+               "title":"Specify how the host should obtain its settings for this TCP/IP stack.",
+               "useDHCP": {
+                  "label": "Use DHCP DNS services from the following adapter"
+               },
+               "adapter": "Adapter",
+               "manual": {
+                  "label": "Manually configure the settings for this TCP/IP stack",
+                  "hostName": "Host name",
+                  "domainName": "Domain name",
+                  "primaryDNS": "Primary DNS server",
+                  "secondaryDNS": "Secondary DNS server",
+                  "searchDomains": "Search domains",
+                  "searchDomainsOnePerLine": "One search domain per line"
+               }
+            },
+            "routing": {
+               "title": "Routing",
+               "ipv4": "IPv4 gateway",
+               "ipv6": "IPv6 gateway"
+            },
+            "congestionControl": {
+               "newReno": "New Reno",
+               "cubic": "CUBIC",
+               "CUBIC": "CUBIC"
+            },
+            "advancedSettings": {
+               "title": "Advanced settings",
+               "congestionControl": "Congestion control algorithm",
+               "maxNumberConnections": "Maximum number of connections"
+            },
+            "notification": {
+               "success": "Successfully updated configuration for {{netstack}}",
+               "failure": "Failed to update configuration for {{netstack}}"
+            },
+            "error": {
+               "hostName": "Please provide a valid host name, the length must be less than or equal to {{max}}",
+               "domainName": "Please provide a valid domain name, the length must be less than or equal to {{max}}",
+               "primaryDNS": "Please provide a valid primary DNS server, the length must be less than or equal to {{max}}",
+               "secondaryDNS": "Please provide a valid secondary DNS server, the length must be less than or equal to {{max}}",
+               "searchDomains": "Please provide valid search domains, one per line, no commas.",
+               "ipv4Gateway": "Please provide a valid IPv4 gateway",
+               "ipv6Gateway": "Please provide a valid IPv6 gateway",
+               "maxConnections": "Please provide a number between {{min}} and {{max}} for max connections"
+            }
+         }
+      },
+      "tcp": {
+         "congestionControl": {
+            "newreno": "New Reno",
+            "cubic": "CUBIC"
+         }
+      },
+      "portgroup": {
+         "alt": "Port group",
+         "type": {
+            "Network": "Standard port group",
+            "DistributedVirtualPortgroup": "Distributed virtual port group",
+            "Opaque": "Opaque network port group",
+            "OpaqueNetwork": "Opaque network port group"
+         },
+         "summary": {
+            "accessible": "Accessible:",
+            "virtualMachines": "Virtual machines:",
+            "virtualSwitch": "Virtual switch:",
+            "vlanId": "VLAN ID:",
+            "activePorts": "Active ports:",
+            "vswitchTopology": "vSwitch topology",
+            "nicTeamingPolicy": "NIC teaming policy",
+            "offloadPolicy": "Offload policy",
+            "securityPolicy": "Security policy",
+            "shapingPolicy": "Shaping policy",
+            "actions": {
+               "editSettings": {
+                  "label": "Edit settings",
+                  "tooltip": "Edit the settings for this port group"
+               },
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the adapters table"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for the selected port group"
+               }
+            }
+         },
+         "events": {
+            "type": "Type:",
+            "time": "Time:",
+            "virtualMachine": "Virtual machine:"
+         },
+         "accessible": {
+            "true": "Yes",
+            "false": "No"
+         },
+         "add": {
+            "title": "Add port group - {{name}}",
+            "titleNoName": "Add port group",
+            "newPortgroup": "New port group",
+            "confirmLabel": "Add",
+            "rejectLabel": "Cancel",
+            "toolTip": "Add a port group",
+            "selectVSwitch": "Select a virtual switch",
+            "missingName": "Please provide a name for the port group",
+            "invalidName": "Portgroup name may not contain double quotes",
+            "missingVSwitch": "Please select a virtual switch for the port group",
+            "badVLANIDRange": "VLAN ID must be between 0 and 4095",
+            "success": "Port group {{name}} was successfully created",
+            "failure": "Failed to create new port group {{name}}"
+         },
+         "edit": {
+            "title": "Edit port group - {{name}}",
+            "titleNoName": "Edit port group",
+            "confirmLabel": "Save",
+            "rejectLabel": "Cancel",
+            "missingName": "Please provide a name for the port group",
+            "missingVSwitch": "Please select a virtual switch for the port group",
+            "badVLANIDRange": "VLAN ID must be between 0 and 4095",
+            "success": "Port group {{name}} was successfully saved",
+            "failure": "Failed to save port group {{name}}",
+            "trafficShaping": {
+               "title": "Traffic shaping",
+               "policyExceptions": "Policy exceptions",
+               "status": "Status",
+               "disabled": "Disabled",
+               "enabled": "Enabled",
+               "averageBandwidth": "Average bandwidth",
+               "peakBandwidth": "Peak bandwidth",
+               "burstSize": "Burst size",
+               "kbps": "kb/s",
+               "kb": "KB",
+               "clickToExpand": "Click to expand",
+               "note": {
+                  "title": "Note",
+                  "content": "Traffic shaping policy is applied to the traffic of each virtual network adapter attached to the virtual switch."
+               },
+               "inherit": "Inherit from vSwitch"
+            },
+            "nicTeaming": {
+               "title": "NIC teaming",
+               "clickToExpand": "Click to expand",
+               "loadBalancing": {
+                  "title": "Load balancing",
+                  "loadbalance_ip": "Route based on IP hash",
+                  "loadbalance_srcmac": "Route based on source MAC hash",
+                  "loadbalance_srcid": "Route based on originating port ID",
+                  "failover_explicit": "Use explicit failover order"
+               },
+               "failoverDetection": {
+                  "title": "Network failover detection",
+                  "linkStatus": "Link status only",
+                  "beaconOnly": "Beacon only"
+               },
+               "notifySwitches": {
+                  "title": "Notify switches",
+                  "yes": "Yes",
+                  "no": "No"
+               },
+               "failBack": {
+                  "title": "Failback",
+                  "yes": "Yes",
+                  "no": "No"
+               },
+               "overrideFailoverOrder": {
+                  "title": "Override failover order",
+                  "yes": "Yes",
+                  "no": "No"
+               },
+               "failoverOrder": {
+                  "title": "Failover order",
+                  "override": "Override switch failover order",
+                  "usedAs": "Status",
+                  "standby": "Standby",
+                  "active": "Active",
+                  "unused": "Unused",
+                  "name": "Name",
+                  "speed": "Speed",
+                  "networks": "Networks",
+                  "markAsStandby": {
+                     "label": "Mark standby",
+                     "tooltip": "Mark this physical NIC as standby"
+                  },
+                  "markAsActive": {
+                     "label": "Mark active",
+                     "tooltip": "Mark this physical NIC as active"
+                  },
+                  "markAsUnused": {
+                     "label": "Mark unused",
+                     "tooltip": "Mark this physical NIC as unused"
+                  },
+                  "moveUp": {
+                     "label": "Move up",
+                     "tooltip": "Move this adapter up in the failover order"
+                  },
+                  "moveDown": {
+                     "label": "Move down",
+                     "tooltip": "Move this adapter down in the failover order"
+                  }
+               },
+               "inherit": "Inherit from vSwitch"
+            }
+         },
+         "remove": {
+            "title": "Remove port group",
+            "close": "Close",
+            "confirm": "Remove",
+            "rejectLabel": "Cancel",
+            "notification": {
+               "success": "Portgroup {{name}} removed",
+               "error": "Failed to remove portgroup {{name}}"
+            },
+            "confirmation": "Remove the following port group?",
+            "cantRemove": "One or more port groups can't be removed because there are still VMs or VMkernel NICs attached."
+         },
+         "settings": {
+            "name": {
+               "title": "Name",
+               "change": "Changing this port group's name will orphan {{length}} VMs.",
+               "rename": "You can't rename this port group as it has {{length}} active port"
+            },
+            "vlanId": "VLAN ID",
+            "vSwitch": {
+               "label": "Virtual switch",
+               "change": "You cannot change this port group's vSwitch while there are active ports ({{length}})."
+            }
+         },
+         "actions": {
+            "editSettings": {
+               "label": "Edit settings",
+               "tooltip": "Edit this port group"
+            },
+            "refresh": {
+               "label": "Refresh",
+               "tooltip": "Refresh the port group list"
+            },
+            "actions": {
+               "label": "Actions",
+               "tooltip": "Actions for the selected port group"
+            },
+            "remove": {
+               "label": "Remove",
+               "tooltip": "Remove this port group"
+            }
+         },
+         "list": {
+            "unknownVLANID": "Unknown",
+            "columns": {
+               "name": "Name",
+               "activePorts": "Active ports",
+               "vlanId": "VLAN ID",
+               "type": "Type",
+               "vswitch": "vSwitch",
+               "vms": "VMs"
+            }
+         },
+         "portlets": {
+            "summary": {
+               "loading": "Summary loading...",
+               "shaping": {
+                  "true": "Yes",
+                  "false": "No"
+               }
+            },
+            "teaming": {
+               "loading": "Teaming policy loading...",
+               "notify": {
+                  "label": "Notify switches",
+                  "true": "Yes",
+                  "false": "No"
+               },
+               "policy": {
+                  "label": "Policy",
+                  "loadbalance_ip": "Route based on IP hash",
+                  "loadbalance_srcmac": "Route based on source MAC hash",
+                  "loadbalance_srcid": "Route based on originating port ID",
+                  "failover_explicit": "Use explicit failover order"
+               },
+               "reverse": {
+                  "label": "Reverse policy",
+                  "true": "Yes",
+                  "false": "No"
+               },
+               "rolling": {
+                  "label": "Failback",
+                  "true": "No",
+                  "false": "Yes"
+               }
+            },
+            "shaping": {
+               "averageBandwidth": "Average bandwidth",
+               "peakBandwidth": "Peak bandwidth",
+               "burstSize": "Burst size",
+               "enabled": {
+                  "label": "Enabled",
+                  "true": "Yes",
+                  "false": "No"
+               }
+            },
+            "offload": {
+               "loading": "Offload policy loading...",
+               "checksum": {
+                  "label": "Checksum offload",
+                  "true": "Yes",
+                  "false": "No"
+               },
+               "tcpSegmentation": {
+                  "label": "TCP segmentation",
+                  "true": "Yes",
+                  "false": "No"
+               },
+               "zeroCopy": {
+                  "label": "Zero-copy transmission",
+                  "true": "Yes",
+                  "false": "No"
+               }
+            },
+            "security": {
+               "loading": "Security policy loading...",
+               "allowPromiscuous": {
+                  "label": "Allow promiscuous mode",
+                  "true": "Yes",
+                  "false": "No"
+               },
+               "forgedTransmits": {
+                  "label": "Allow forged transmits",
+                  "true": "Yes",
+                  "false": "No"
+               },
+               "macChanges": {
+                  "label": "Allow MAC changes",
+                  "true": "Yes",
+                  "false": "No"
+               }
+            }
+         },
+         "monitor": {
+            "title": "Monitor"
+         }
+      },
+      "pnic": {
+         "alt": "Physical NIC",
+         "summary": {
+            "linkSpeed": "Link speed:",
+            "driver": "Driver:",
+            "macAddress": "MAC address:",
+            "adapterDetails": "Adapter Details",
+            "halfduplex": "half duplex",
+            "fullduplex": "full duplex",
+            "up": "Up",
+            "down": "Down",
+            "dialog": {
+               "unknown": {
+                  "title": "Unknown PNIC"
+               }
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the physical adapters table"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for the selected physical adapter"
+               },
+               "editSettings": {
+                  "label": "Edit settings",
+                  "tooltip": "Edit the settings for the selected physical adapter"
+               }
+            },
+            "portlets": {
+               "details": {
+                  "pciAddress": "PCI address",
+                  "autoNegotiateSupport": "Auto-negotiate support",
+                  "autoNegotiateEnabled": "Auto-negotiate enabled",
+                  "directPathIOSupport": "Direct-path IO support",
+                  "wakeOnLANSupport": "Wake-on-LAN support",
+                  "supportedSpeeds": "Supported speeds",
+                  "yes": "Yes",
+                  "no": "No",
+                  "enabled": "Enabled",
+                  "disabled": "Disabled"
+               },
+               "subnets": {
+                  "title": "Discovered Subnets",
+                  "subnet": "Subnet {{x}}"
+               },
+               "lldp": {
+                  "title": "Link-layer Discovery Protocol Details",
+                  "chassisId": "Chassis ID",
+                  "portId": "Port ID",
+                  "timeToLive": "Time to live",
+                  "parameters": "Parameters"
+               },
+               "cdp": {
+                  "title": "Cisco Discovery Protocol Details",
+                  "address": "IP address",
+                  "cdpVersion": "CDP version",
+                  "peerDeviceCapability": {
+                     "label": "Peer device capabilities",
+                     "host": "Host",
+                     "igmpEnabled": "IGMP",
+                     "networkSwitch": "Network switch",
+                     "repeater": "Repeater",
+                     "router": "Router",
+                     "sourceRouteBridge": "Source route bridge",
+                     "transparentBridge": "Transparent bridge"
+                  },
+                  "devId": "Device ID",
+                  "fullDuplex": "Full duplex",
+                  "hardwarePlatform": "Hardware platform",
+                  "ipPrefix": "IP prefix",
+                  "ipPrefixLen": "IP prefix length",
+                  "location": "Location",
+                  "mgmtAddr": "Management address",
+                  "mtu": "MTU",
+                  "portId": "Port ID",
+                  "samples": "Samples",
+                  "softwareVersion": "Software version",
+                  "systemName": "System name",
+                  "systemOID": "System OID",
+                  "timeout": "Timeout",
+                  "ttl": "Time to live",
+                  "vlan": "VLAN ID"
+               }
+            }
+         },
+         "edit": {
+            "confirmLabel": "Save",
+            "rejectLabel": "Cancel",
+            "title": "Edit physical NIC - {{nic}}",
+            "titleNoName": "Edit physical NIC",
+            "notification": {
+               "error": "Failed to set physical NIC speed for {{nic}}",
+               "success": "Successfully updated speed for physical NIC {{nic}}"
+            },
+            "speed": {
+               "label": "Speed",
+               "auto": "Auto-negotiate"
+            }
+         },
+         "context": {
+            "edit": {
+               "label": "Edit settings",
+               "tooltip": "Edit settings for this physical NIC"
+            }
+         },
+         "list": {
+            "columns": {
+               "name": "Name",
+               "driver": "Driver",
+               "macAddress": "MAC address",
+               "linkSpeed": "Link speed",
+               "auto": "Auto-negotiate"
+            },
+            "auto": {
+               "yes": "Enabled",
+               "no": "Disabled"
+            },
+            "actionBar": {
+               "refresh": {
+                  "label": "Refresh",
+                  "tooltip": "Refresh the physical adapters table"
+               },
+               "actions": {
+                  "label": "Actions",
+                  "tooltip": "Actions for the selected physical adapter"
+               },
+               "editSettings": {
+                  "label": "Edit settings",
+                  "tooltip": "Edit the settings for the selected physical adapter"
+               }
+            }
+         },
+         "monitor": {
+            "title": "Monitor",
+            "events": {
+               "title": "Events",
+               "tooltip": "Events"
+            },
+            "tasks": {
+               "title": "Tasks",
+               "tooltip": "Tasks"
+            }
+         },
+         "events": {
+            "type": "Type:",
+            "time": "Time:",
+            "virtualMachine": "Virtual machine:"
+         },
+         "duplex": {
+            "half": "half duplex",
+            "full": "full duplex",
+            "true": "Full",
+            "false": "Half"
+         },
+         "Mbps": "Mbps",
+         "linkDown": "Link down"
+      },
+      "error": {
+         "unknownNetwork": "Sorry, the Network '{{moid}}' was not found.",
+         "unknownPortgroup": "Sorry, the port group '{{moid}}' was not found.",
+         "unknownVMknic": "Sorry, the VMkernel NIC '{{moid}}' was not found.",
+         "unknownVSwitch": "Sorry, the vSwitch '{{moid}}' was not found."
+      }
+   }
+}

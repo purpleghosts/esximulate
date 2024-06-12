@@ -1,0 +1,117 @@
+
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><div class="object-navigator menu-panel" ng-right-click="">
+   <ul class="object-navigator-list">
+      <li ng-repeat="d in mainMenu.structure" ng-if="!d.hidden">
+
+         <div ng-if="d.newSection" ng-class="{&#39;object-navigator-header-section&#39;: d.newSection}"></div>
+
+         <div ng-if="d.state" class="object object-navigator-header" ng-class="{&#39;object-navigator-header-selected&#39;: mainMenu.isSelected(d.state) &amp;&amp; !d.abstract}">
+            <div class="menu-nav-element">
+               <em ng-if="d.children &amp;&amp; d.children.length &gt; 0" ng-click="mainMenu.toggleCollapsed(d)" tabindex="0" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; mainMenu.toggleCollapsed(d)" style="margin: 0px" ng-class="{&#39;vui-icon-caret-gray-right&#39;: d.collapsed, &#39;vui-icon-caret-gray-down&#39;: !d.collapsed}"></em>
+               <em ng-if="d.children &amp;&amp; d.children.length === 0" style="margin: 0px; opacity: 0.0;" class="vui-icon-caret-gray-right"></em>
+            </div>
+            <a class="menu-nav-element" ui-sref="{{d.state}}" ng-right-click="onContext($event, d)" tabindex="0" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; mainMenu.open(d)">
+               <span ng-if="d.iconClass" class="{{d.iconClass}}"></span>
+               <span ng-click="mainMenu.open(d)" class="object-navigator-label short-label bold" title="{{d.title}}">{{d.title}}</span>
+               <span ng-if="d.total || d.total === 0" class="object-navigator-counter">{{d.total}}</span>
+            </a>
+         </div>
+         <div ng-if="!d.state" class="object">
+            <div class="menu-nav-element" ng-right-click="onContext($event, d)">
+               <div class="menu-nav-element">
+                  <em ng-click="mainMenu.open(d)" tabindex="0" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; mainMenu.open(d)" style="margin: 0px" ng-class="{&#39;vui-icon-caret-gray-right&#39;: d.collapsed, &#39;vui-icon-caret-gray-down&#39;: !d.collapsed}"></em>
+               </div>
+               <span ng-if="d.iconClass" class="{{d.iconClass}}"></span>
+               <span ng-click="mainMenu.toggleCollapsed(d)" class="object-navigator-label short-label bold" title="{{d.title}}">{{d.title}}</span>
+               <span ng-if="d.total || d.total === 0" class="object-navigator-counter">{{d.total}}</span>
+            </div>
+         </div>
+
+         <ul ng-if="!d.collapsed &amp;&amp; d.children.length &gt; 0" class="object-navigator-list object-navigator-list1 toggle">
+            <li ng-repeat="dc in d.children" ng-if="!dc.hidden">
+
+               <div ng-if="dc.state &amp;&amp; (dc.children &amp;&amp; dc.children.length &gt; 0)" class="menu-parent2 object object-navigator-header" ng-class="{&#39;object-navigator-header-selected&#39;: mainMenu.isSelected(dc.state)}">
+                  <div class="menu-nav-element">
+                     <em ng-click="mainMenu.toggleCollapsed(dc)" tabindex="0" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; mainMenu.toggleCollapsed(dc)" style="margin: 0px" ng-class="{&#39;vui-icon-caret-gray-right&#39;: dc.collapsed, &#39;vui-icon-caret-gray-down&#39;: !dc.collapsed}"></em>
+                  </div>
+                  <a class="menu-nav-element" ui-sref="{{dc.abstract ? false : dc.state}}" tabindex="0" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; mainMenu.open(dc)" ng-right-click="onContext($event, dc)">
+                     <span ng-if="dc.iconClass" class="{{dc.iconClass}}"></span>
+                     <span ng-click="mainMenu.open(dc)" class="object-navigator-label short-label bold" title="{{dc.title}}">{{dc.title}}</span>
+                  </a>
+               </div>
+
+               <div ng-if="!dc.state &amp;&amp; (dc.children &amp;&amp; dc.children.length &gt; 0)" class="menu-parent2 object">
+                  <div class="menu-nav-element" ng-right-click="onContext($event, dc)">
+                     <div class="menu-nav-element">
+                        <em ng-click="mainMenu.toggleCollapsed(dc)" tabindex="0" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; mainMenu.toggleCollapsed(dc)" style="margin: 0px" ng-class="{&#39;vui-icon-caret-gray-right&#39;: dc.collapsed, &#39;vui-icon-caret-gray-down&#39;: !dc.collapsed}"></em>
+                     </div>
+                     <span ng-if="dc.iconClass" class="{{dc.iconClass}}"></span>
+                     <span class="object-navigator-label short-label bold" title="{{dc.title}}">{{dc.title}}</span>
+                  </div>
+               </div>
+
+               <ul ng-if="!dc.collapsed &amp;&amp; dc.children &amp;&amp; dc.children.length &gt; 0" class="object-navigator-list object-navigator-list2 toggle">
+                  <li ng-repeat="dcc in dc.children">
+
+                     <div ng-if="dcc.state &amp;&amp; (dcc.children &amp;&amp; dcc.children.length &gt; 0)" class="menu-parent3 object" ng-class="{&#39;selected&#39;: mainMenu.isSelected(dcc.state)}">
+                        <div class="menu-nav-element">
+                           <em ng-click="mainMenu.toggleCollapsed(dcc)" tabindex="0" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; mainMenu.toggleCollapsed(dcc)" style="margin: 0px" ng-class="{&#39;vui-icon-caret-gray-right&#39;: dcc.collapsed, &#39;vui-icon-caret-gray-down&#39;: !dcc.collapsed}"></em>
+                        </div>
+                        <a class="menu-nav-element" ui-sref="{{dcc.abstract ? false : dcc.state}}" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; mainMenu.open(dcc)" style="margin: 0px">
+                           <span ng-if="dcc.iconClass" class="{{dcc.iconClass}}"></span>
+                           <span ng-click="mainMenu.open(dcc)" class="object-navigator-label short-label bold" title="{{dcc.title}}">{{dcc.title}}</span>
+                        </a>
+                     </div>
+                     <div ng-if="!dcc.state &amp;&amp; (dcc.children &amp;&amp; dcc.children.length &gt; 0)" class="menu-parent3 object">
+                        <div class="menu-nav-element">
+                           <div class="menu-nav-element">
+                              <em ng-click="mainMenu.toggleCollapsed(dcc)" tabindex="0" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; mainMenu.toggleCollapsed(dcc)" style="margin: 0px" ng-class="{&#39;vui-icon-caret-gray-right&#39;: dcc.collapsed, &#39;vui-icon-caret-gray-down&#39;: !dcc.collapsed}"></em>
+                           </div>
+                           <span ng-if="dcc.iconClass" class="{{dcc.iconClass}}"></span>
+                           <span class="object-navigator-label short-label bold" title="{{dcc.title}}">{{dcc.title}}</span>
+                        </div>
+                     </div>
+
+                     <ul ng-if="!dcc.collapsed &amp;&amp; dcc.children &amp;&amp; dcc.children.length &gt; 0" class="object-navigator-list object-navigator-list3 toggle">
+                        <li ng-repeat="dccc in dcc.children">
+                           <a ng-if="dccc.state" ng-class="{&#39;selected&#39;: mainMenu.isSelected(dccc.state)}" class="object" ui-sref="{{dccc.abstract ? false : dccc.state}}" ng-right-click="onContext($event, dccc)">
+                              <span class="object-navigator-label menu-children3 short-label" title="{{dccc.title}}">{{dccc.title}}</span>
+                           </a>
+                        </li>
+                     </ul>
+
+                     <a ng-if="dcc.state &amp;&amp; (!dcc.children || dcc.children.length === 0)" ng-class="{&#39;selected&#39;: mainMenu.isSelected(dcc.state)}" class="object" ui-sref="{{dcc.abstract ? false : dcc.state}}" ng-right-click="onContext($event, dcc)">
+                        <span class="object-navigator-label menu-children2 short-label" title="{{dcc.title}}">{{dcc.title}}</span>
+                     </a>
+
+                  </li>
+               </ul>
+
+               <div ng-if="dc.state &amp;&amp; dc.object &amp;&amp; (!dc.children || dc.children.length === 0)" class="menu-parent2 object object-navigator-header" ng-class="{&#39;object-navigator-header-selected&#39;: mainMenu.isSelected(dc.state)}">
+                  <div class="menu-nav-element">
+                     <em style="margin: 0px; opacity: 0.0;" class="vui-icon-caret-gray-right"></em>
+                  </div>
+                  <a class="menu-nav-element" ui-sref="{{dc.abstract ? false : dc.state}}" ng-right-click="onContext($event, dc)" tabindex="0" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; mainMenu.open(dc)">
+                     <span ng-if="dc.iconClass" class="{{dc.iconClass}}"></span>
+                     <span ng-click="mainMenu.open(dc)" class="object-navigator-label short-label bold" title="{{dc.title}}">{{dc.title}}</span>
+                  </a>
+               </div>
+
+               <a ng-if="dc.state &amp;&amp; !dc.object &amp;&amp; (!dc.children || dc.children.length === 0)" ng-class="{&#39;selected&#39;: mainMenu.isSelected(dc.state)}" class="object" ui-sref="{{dc.abstract ? false : dc.state}}" ng-right-click="onContext($event, dc)">
+                  <span class="object-navigator-label menu-children1 short-label" title="{{dc.title}}">{{dc.title}}</span>
+               </a>
+
+            </li>
+
+            <li ng-if="d.children.length &gt; 0 &amp;&amp; d.more">
+               <div class="object-navigator-header">
+                  <a class="more" ui-sref="{{d.state}}"><span class="object-navigator-label menu-children1 more">{{d.more}}</span></a>
+               </div>
+            </li>
+         </ul>
+
+      </li>
+   </ul>
+</div>
+</body></html>

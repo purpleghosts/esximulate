@@ -1,0 +1,1104 @@
+{
+   "storage": {
+      "title": "Almacenamiento",
+      "tabs": {
+         "datastores": {
+            "label": "Almacenes de datos",
+            "tooltip": "Almacenes de datos"
+         },
+         "adapters": {
+            "label": "Adaptadores",
+            "tooltip": "Adaptadores"
+         },
+         "devices": {
+            "label": "Dispositivos",
+            "tooltip": "Dispositivos"
+         },
+         "nvdimm": {
+            "label": "Memoria persistente",
+            "tooltip": "Memoria persistente"
+         }
+      },
+      "wizard": {
+         "partitionType": "Tipo de partición",
+         "vmfsVersion": "Versión de VMFS",
+         "error": {
+            "scheme": "Seleccione un esquema de particiones",
+            "size": "Seleccione un tamaño de partición entre {{min}} y {{max}}",
+            "partition": "No se ha seleccionado ninguna partición. Seleccione una partición en el diagrama de la izquierda."
+         }
+      },
+      "permissions": {
+         "manage": {
+            "menu": "Permisos",
+            "title": "Administrar permisos",
+            "close": "Cerrar",
+            "cancel": "Cancelar",
+            "noUsers": "Sin usuarios",
+            "addUser": {
+               "label": "Agregar usuario",
+               "toolTip": "Agregar un usuario"
+            },
+            "removeUser": {
+               "label": "Quitar usuario",
+               "toolTip": "Quitar un usuario"
+            },
+            "assignRole": {
+               "label": "Asignar función",
+               "toolTip": "Asignar una función a un usuario"
+            },
+            "updatePermissions": {
+               "successNotification": "Los permisos se actualizaron correctamente",
+               "failureNotification": "No se pudieron actualizar los permisos: {{error}}"
+            },
+            "columns": {
+               "user": "Usuario",
+               "role": "Función"
+            },
+            "usersComboBoxOptions": {
+               "placeholder": "Seleccionar un usuario"
+            },
+            "rolesComboBoxOptions": {
+               "placeholder": "Seleccionar una función"
+            },
+            "propagateLabel": "Propagar a todos los objetos secundarios"
+         }
+      },
+      "devices": {
+        "browser": {
+          "dialog": {
+            "title": "Seleccionar un dispositivo de almacenamiento",
+            "reject": "Cancelar",
+            "confirm": "Seleccionar"
+          },
+          "datagrid": {
+            "name": "Nombre",
+            "capacity": "Capacidad"
+          }
+        }
+      },
+      "nvdimm": {
+         "summary": {
+            "type": "Tipo",
+            "capacity": "Capacidad",
+            "uuid": "UUID",
+            "health": "Estado de mantenimiento",
+            "healthInformation": "Información de estado de mantenimiento",
+            "representationString": "Cadena de fabricante",
+            "interleavesetID": "Conjunto de intercalación",
+            "lifespan": "Duración",
+            "temperature": "Temperatura",
+            "temperatureThreshold": "Umbral de temperatura",
+            "persistentNamespace": "Persistente",
+            "blockNamespace": "Bloque",
+            "types": {
+               "namespace": "Espacio de nombres",
+               "dimm": "NVDIMM"
+            }
+         },
+         "healthStatus": {
+            "title": "Estado de mantenimiento",
+            "badBlockSize": "Tamaño de bloque incorrecto",
+            "bttCorrupt": "BTT dañado",
+            "interleaveBroken": "Intercalación rota",
+            "labelInconsistent": "Etiqueta incoherente",
+            "labelMissing": "Etiqueta ausente",
+            "missing": "Ausente",
+            "normal": "Normal",
+            "nvdimmUnhealthy": "NVDIMM participantes en estado incorrecto"
+         },
+         "devices": {
+            "tabTitle": "Módulos",
+            "tabTooltip": "Módulos de NVDIMM",
+            "actions": {
+               "refresh": {
+                  "label": "Actualizar",
+                  "tooltip": "Actualizar lista de NVDIMM"
+               },
+               "actions": {
+                  "label": "Acciones",
+                  "tooltip": "Acciones para el NVDIMM seleccionado"
+               }
+            },
+            "datagrid": {
+               "id": "Identificador",
+               "persistentCapacity": "Capacidad",
+               "availablePersistentCapacity": "Libre",
+               "empty": "No hay módulos para mostrar.",
+               "health": "Estado de mantenimiento"
+            },
+            "healthStatus": {
+               "normal": "Normal",
+               "maintenanceNeeded": "Se necesita mantenimiento",
+               "performanceDegraded": "Rendimiento degradado",
+               "wpDataLoss": "Pérdida de datos de persistencia de escritura",
+               "allDataLoss": "Pérdida de todos los datos",
+               "unknown": "Desconocido"
+            },
+            "healthInformation": {
+               "normal": "Normal",
+               "maintenanceNeeded": "Se necesita mantenimiento, pero no hay pérdida de datos. Compruebe los eventos del sistema para obtener más detalles.",
+               "performanceDegraded": "El rendimiento se degradó debido a errores, pero no hay pérdida de datos. Compruebe los eventos de VOB para obtener más detalles.",
+               "wpDataLoss": "Se detectó una pérdida de datos de persistencia de escritura o esta es inminente. Compruebe los eventos de VOB para obtener más detalles.",
+               "allDataLoss": "Se detectó una pérdida de datos de escritura o de lectura, o esta es inminente. Compruebe los eventos de VOB para obtener más detalles.",
+               "unknown": "El estado de mantenimiento no puede obtenerse o no está disponible en este momento."
+            }
+         },
+         "interleave": {
+            "tabTitle": "Conjuntos de intercalación",
+            "tabTooltip": "Conjuntos de intercalación que abarcan varios NVDIMM",
+            "actions": {
+               "refresh": {
+                  "label": "Actualizar",
+                  "tooltip": "Actualizar lista de conjuntos de intercalación"
+               }
+            },
+            "gridEmpty": "No hay conjuntos de intercalación para mostrar.",
+            "properties": {
+               "size": "Capacidad",
+               "deviceList": "NVDIMM",
+               "availableSize": "Libre",
+               "setId": "Identificador",
+               "state": "Estado",
+               "states": {
+                  "invalid": "No válido",
+                  "active": "Activo"
+               }
+            }
+         },
+         "namespaces": {
+            "tabTitle": "Espacios de nombres",
+            "tabTooltip": "Espacios de nombres de NVDIMM",
+            "create": {
+               "dialog": {
+                  "title": "Crear espacio de nombres",
+                  "friendlyName": "Etiqueta",
+                  "locationID": "Ubicación",
+                  "type": "Tipo",
+                  "blockCount": "Recuento de bloques",
+                  "blockSize": "Tamaño de bloque",
+                  "size": "Tamaño (en GB)",
+                  "persistent": "Persistente",
+                  "block": "Bloque",
+                  "error": {
+                     "noBlockCount": "Introduzca un tamaño mayor que cero."
+                  }
+               },
+               "success": "El espacio de nombres se creó correctamente.",
+               "error": "Error al crear espacio de nombres."
+            },
+            "delete": {
+               "dialog": {
+                  "title": "Eliminar espacio de nombres",
+                  "warning": "¿Está seguro de que desea eliminar el espacio de nombres {{name}}?<br><br>Es necesario reiniciar para que ESX administre este espacio de nombres."
+               },
+               "success": "El espacio de nombres se eliminó correctamente.",
+               "error": "Error al eliminar espacio de nombres."
+            },
+            "actions": {
+               "refresh": {
+                  "label": "Actualizar",
+                  "tooltip": "Actualizar lista de espacios de nombres"
+               },
+               "actions": {
+                  "label": "Acciones",
+                  "tooltip": "Acciones para el espacio de nombres seleccionado"
+               },
+               "create": {
+                  "label": "Nuevo espacio de nombres",
+                  "tooltip": "Crear un espacio de nombres"
+               },
+               "delete": {
+                  "label": "Eliminar",
+                  "tooltip": "Eliminar un espacio de nombres"
+               },
+               "reboot": {
+                  "label": "Reiniciar host",
+                  "tooltip": "Reiniciar el host"
+               }
+            },
+            "health": {
+               "badBlockSize": "Se encontró un bloque incorrecto.",
+               "bttCorrupt": "BTT está dañado",
+               "interleaveBroken": "Intercalación rota",
+               "labelInconsistent": "La etiqueta es incoherente",
+               "labelMissing": "Falta la etiqueta",
+               "missing": "Desconocido",
+               "normal": "Normal",
+               "nvdimmUnhealthy": "NVDIMM en mal estado"
+            },
+            "datagrid": {
+               "name": "Nombre",
+               "capacity": "Capacidad",
+               "healthStatus": "Estado de mantenimiento",
+               "inUse": "En uso",
+               "interleaveSet": "Conjunto de intercalación",
+               "empty": "No hay espacios de nombres para mostrar.",
+               "state": "Estado",
+               "states": {
+                  "inUse": "En uso",
+                  "notInUse": "No en uso",
+                  "invalid": "No válido"
+               }
+            }
+         }
+      },
+      "device": {
+         "context": {
+            "disk": {
+               "clear": {
+                  "label": "Borrar tabla de particiones",
+                  "tooltip": "Borrar la tabla de particiones del disco"
+               },
+               "editPartitions": {
+                  "label": "Editar particiones",
+                  "tooltip": "Editar la tabla de particiones del disco"
+               },
+               "rescan": {
+                  "title": "Volver a examinar",
+                  "tooltip": "Volver a examinar todos los dispositivos de almacenamiento en busca de almacenes de datos"
+               }
+            }
+         },
+         "editPartitions": {
+            "title": "Editar particiones - {{disk}}",
+            "rejectLabel": "Cancelar",
+            "confirmLabel": "Guardar particiones",
+            "before": "Antes",
+            "after": "Después de editar una partición",
+            "actions": {
+               "delete": {
+                  "label": "Eliminar partición",
+                  "tooltip": "Eliminar la partición seleccionada"
+               },
+               "reset": {
+                  "label": "Restablecer",
+                  "tooltip": "Restablecer las particiones a su estado original"
+               }
+            },
+            "warning": {
+               "title": "Confirmar cambios de tabla de particiones a {{disk}}",
+               "content": "Está a punto de modificar la tabla de particiones de {{disk}}. Esta acción destructiva podría provocar una pérdida de datos. ¿Está seguro de que desea continuar?",
+               "confirmLabel": "Sí",
+               "rejectLabel": "No"
+            },
+            "successNotification": "La tabla de particiones de {{disk}} se actualizó correctamente",
+            "failureNotification": "No se pudo actualizar la tabla de particiones de {{disk}}"
+         },
+         "clear": {
+            "title": "Confirmar borrado de tabla de particiones - {{disk}}",
+            "content": "Está a punto de borrar la tabla de particiones de {{disk}}. Esta acción destructiva podría provocar una pérdida de datos. ¿Está seguro de que desea continuar?",
+            "confirmLabel": "Sí",
+            "rejectLabel": "No",
+            "failureNotification": "No se pudo borrar el disco {{disk}}",
+            "successNotification": "Disco borrado correctamente {{disk}}"
+         },
+         "type": {
+            "disk": "Disco",
+            "cdrom": "CD-ROM",
+            "enclosure": "Gabinete",
+            "storageArrayController": "Controladora de matriz de almacenamiento",
+            "unknown": "Desconocido",
+            "printer": "Impresora",
+            "scanner": "Escáner"
+         },
+         "summary": {
+            "alt": "Dispositivo",
+            "uuid": "UUID:",
+            "notApplicable": "N/D",
+            "type": "Tipo:",
+            "model": "Modelo:",
+            "path": "Ruta de acceso:",
+            "capacity": "Capacidad:",
+            "partitionFormat": "Formato de partición:",
+            "partitions": "Particiones",
+            "partitionDiagram": "Diagrama de particiones",
+            "blocks": "bloques",
+            "portlet": {
+               "type": "Tipo",
+               "startBlock": "Iniciar bloque",
+               "endBlock": "Finalizar bloque",
+               "blockSize": "Tamaño de bloque",
+               "size": "Tamaño"
+            },
+            "actions": {
+               "actions": {
+                  "label": "Acciones",
+                  "tooltip": "Acciones para objetos seleccionados en la lista."
+               },
+               "increaseCapacity": {
+                  "label": "Aumentar capacidad del almacén de datos en el disco",
+                  "tooltip": "Aumentar capacidad del almacén de datos en el dispositivo"
+               },
+               "newDatastore": {
+                  "label": "Nuevo almacén de datos",
+                  "tooltip": "Crear nuevo almacén de datos de VMFS en el dispositivo"
+               },
+               "refresh": {
+                  "label": "Actualizar",
+                  "tooltip": "Actualizar la información del dispositivo"
+               }
+            }
+         },
+         "list": {
+            "ok": "Normal",
+            "error": "Error",
+            "timeout": "Tiempo de espera",
+            "degraded": "Degradado",
+            "disk": "Disco",
+            "cdrom": "CD-ROM",
+            "unknown": "Desconocido",
+            "notApplicable": "N/D",
+            "actions": {
+               "actions": {
+                  "label": "Acciones",
+                  "tooltip": "Acciones para objetos seleccionados en la lista."
+               },
+               "increaseCapacity": {
+                  "label": "Aumentar capacidad del almacén de datos en el disco",
+                  "tooltip": "Aumentar capacidad del almacén de datos en el dispositivo"
+               },
+               "rescan": {
+                  "label": "Volver a examinar",
+                  "tooltip": "Volver a examinar todos los dispositivos de almacenamiento en busca de almacenes de datos"
+               },
+               "newDatastore": {
+                  "label": "Nuevo almacén de datos",
+                  "tooltip": "Crear nuevo almacén de datos de VMFS en el dispositivo"
+               },
+               "refresh": {
+                  "label": "Actualizar",
+                  "tooltip": "Actualizar la información del dispositivo"
+               }
+            },
+            "datagrid": {
+               "name": "Nombre",
+               "status": "Condición",
+               "type": "Tipo",
+               "capacity": "Capacidad",
+               "queue": "Profundidad de la cola",
+               "free": "Espacio libre",
+               "vendor": "Proveedor"
+            }
+         }
+      },
+      "partitionTypes": {
+         "C12A7328F81F11D2BA4B00A0C93EC93B": "Sistema EFI",
+         "EBD0A0A2B9E5443387C068B6B72699C7": "Datos básicos",
+         "AA31E02A400F11DB9590000C2911D1B8": "VMFS",
+         "9D27538040AD11DBBF97000C2911D1B8": "Diagnóstico de VMware",
+         "381CFCCC728811E092EE000C2911D0B2": "vSAN",
+         "77719A0CA4A011E3A47E000C29745A24": "vSAN",
+         "4EB2EA3978554790A79EFAE495E21F8D": "VMFSL",
+         "free": "Espacio libre",
+         "extended": "Extendido",
+         "linuxNative": "Linux nativo",
+         "linuxSwap": "Intercambio de Linux",
+         "none": "Ninguno",
+         "ntfs": "NTFS",
+         "vffs": "VFFS",
+         "vmfs": "VMFS",
+         "vmkDiagnostic": "Diagnóstico de VMware",
+         "undefined": "Desconocido",
+         "unknown": "Desconocido",
+         "0xde": "Diagnóstico de Dell",
+         "0x0b": "FAT 32",
+         "0x07": "NTFS",
+         "unknown": "Desconocido"
+      },
+      "datastore": {
+         "create": {
+            "title": "Nuevo almacén de datos",
+            "titleExtend": "Aumenta la capacidad del almacén de datos.",
+            "pages": {
+               "creationType": {
+                  "title": "Seleccionar tipo de creación",
+                  "description": "¿Cómo desea crear un almacén de datos?"
+               },
+               "name": {
+                  "title": "Nombre de almacén de datos",
+                  "description": "Indique un nombre para el nuevo almacén de datos"
+               },
+               "device": {
+                  "title": "Seleccionar dispositivo",
+                  "description": "Seleccione un dispositivo donde creará una nueva partición de VMFS",
+                  "noDevice": "Seleccione un dispositivo"
+               },
+               "nfs": {
+                  "title": "Proporcionar detalles del montaje de NFS",
+                  "description": "Proporcione los detalles del recurso compartido de NFS que desea montar"
+               },
+               "partitioning": {
+                  "title": "Seleccionar opciones de partición",
+                  "description": "Seleccione cómo desea particionar el dispositivo",
+                  "before": "Antes de editar una partición",
+                  "after": "Después",
+                  "selectScheme": "Seleccionar esquema de particiones",
+                  "full": "Usar todo el disco",
+                  "custom": "Personalizado"
+               },
+               "datastore": {
+                  "title": "Seleccionar almacén de datos",
+                  "description": "Seleccione el almacén de datos para el que desea aumentar la capacidad"
+               },
+               "summary": {
+                  "title": "Listo para completar",
+                  "description": "Resumen",
+                  "type": "Tipo de almacén de datos",
+                  "name": "Nombre",
+                  "datastore": "Almacén de datos",
+                  "disk": "Disco",
+                  "partitioning": "Partición",
+                  "vmfsVersion": "Versión de VMFS"
+               }
+            },
+            "device": {
+               "desc": "Los siguientes dispositivos no se reclamaron y se pueden usar para crear un nuevo almacén de datos de VMFS.",
+               "noFree": "No hay dispositivos con espacio libre."
+            },
+            "vmfs": {
+               "label": "Crear nuevo almacén de datos de VMFS",
+               "description": "Crear un nuevo almacén de datos de VMFS en un dispositivo de disco local",
+               "notificationSuccess": "El almacén de datos de VMFS {{name}} se creó correctamente",
+               "notificationFailure": "No se pudo crear el almacén de datos de VMFS {{name}} - {{message}}",
+               "unknown": "Motivo desconocido",
+               "validation": {
+                  "name" : {
+                     "empty" : "Indique un nombre para el nuevo almacén de datos",
+                     "length": "El nombre del almacén de datos debe tener entre {{min}} y {{max}} caracteres. La longitud actual es {{length}}. Revise el nombre.",
+                     "exists": "Ya existe un almacén de datos con el nombre {{name}}."
+                  }
+               }
+            },
+            "mountVmfs": {
+               "label": "Montar un almacén de datos de VMFS existente",
+               "description": "Montar un volumen de VMFS existente",
+               "notificationSuccess": "El almacén de datos de VMFS {{name}} se montó correctamente",
+               "notificationFailure": "No se pudo montar el almacén de datos de VMFS {{name}} - {{message}}"
+            },
+            "extendVmfs": {
+               "label": "Agregar una extensión al almacén de datos de VMFS existente",
+               "description": "Aumentar el tamaño de un almacén de datos existente agregando una nueva extensión en otro disco",
+               "notificationSuccess": "El almacén de datos de VMFS {{name}} se extendió correctamente",
+               "notificationFailure": "No se pudo extender el almacén de datos de VMFS {{name}} - {{message}}",
+               "unknown": "Motivo desconocido"
+            },
+            "expandVmfs": {
+               "label": "Ampliar una extensión del almacén de datos de VMFS existente",
+               "description": "Aumentar el tamaño de un almacén de datos existente ampliando una extensión existente en el espacio libre adyacente",
+               "notificationSuccess": "El almacén de datos de VMFS {{name}} se ha ampliado correctamente.",
+               "notificationFailure": "Error al ampliar el almacén de datos de VMFS {{name}}: {{message}}.",
+               "unknown": "Motivo desconocido"
+            },
+            "nfs": {
+               "label": "Montar almacén de datos de NFS",
+               "description": "Crear un nuevo almacén de datos montando un volumen de NFS remoto",
+               "notificationSuccess": "El almacén de datos de NFS {{name}} se montó correctamente",
+               "notificationFailure": "No se pudo montar el almacén de datos de NFS {{name}} - {{message}}",
+               "server": "Servidor NFS",
+               "share": "Recurso compartido NFS",
+               "version": "Versión de NFS",
+               "user": "Nombre de usuario",
+               "password": "Contraseña",
+               "validation": {
+                  "name": "Indique un nombre para el nuevo almacén de datos",
+                  "server": "Proporcione un servidor NFS",
+                  "share": "Proporcione un recurso compartido NFS"
+               }
+            },
+            "warnFull": {
+               "title": "Advertencia",
+               "content": "Está a punto de borrar todo el contenido del disco y reemplazarlo con la configuración especificada. ¿Está seguro?",
+               "confirmLabel": "Sí",
+               "rejectLabel": "No"
+            }
+         },
+         "registerVM": {
+            "title": "Registrar máquina virtual",
+            "confirmLabel": "Registrar",
+            "successNotification": "La máquina virtual {{path}} se registró correctamente",
+            "failureNotification": "No se pudo registrar la máquina virtual {{path}}. {{message}}",
+            "failureReasonUnknown": "Motivo desconocido",
+            "vmAlreadyRegistered": {
+               "title": "Máquina virtual ya registrada",
+               "content": "ya registrada",
+               "confirmLabel": "Cerrar",
+               "cancelLabel": "Cancelar"
+            }
+         },
+         "unmountVMFS": {
+            "title": "Confirmar desmontaje de almacén de datos - {{name}}",
+            "confirmLabel": "Sí",
+            "rejectLabel": "Cancelar",
+            "content": "¿Está seguro de que desea desmontar {{name}}?",
+            "successNotification": "El almacén de datos {{name}} se desmontó correctamente",
+            "failureNotification": "No se pudo desmontar el almacén de datos {{name}}"
+         },
+         "mountVMFS": {
+            "successNotification": "Se montó el almacén de datos {{name}}",
+            "failureNotification": "No se pudo montar el almacén de datos {{name}}"
+         },
+         "upgradeVMFS": {
+            "successNotification": "El almacén de datos {{name}} se actualizó correctamente de la versión {{oldVersion}} a la {{version}}",
+            "failureNotification": "No se pudo actualizar el almacén de datos de VMFS {{name}}"
+         },
+         "nonSSD": "No SSD",
+         "SSD": "SSD",
+         "summary": {
+            "alt": "Almacén de datos",
+            "type": "Tipo:",
+            "location": "Ubicación:",
+            "hosts": "Hosts:",
+            "uuid": "UUID:",
+            "virtualMachines": "Máquinas virtuales:",
+            "metrics": {
+               "storage": "ALMACENAMIENTO"
+            },
+            "portlets": {
+               "vmfs": {
+                  "title": "Detalles de VMFS",
+                  "local": {
+                     "label": "Local",
+                     "true": "Sí",
+                     "false": "No"
+                  },
+                  "blockSize": "Tamaño de bloque",
+                  "version": "Versión",
+                  "uuid": "UUID",
+                  "extent": "{{index}} de extensión",
+                  "extentValue": "{{disk}}, partición {{partition}}"
+               }
+            },
+            "actions": {
+               "actions": {
+                  "label": "Acciones",
+                  "tooltip": "Acciones para objetos seleccionados en la lista."
+               },
+               "increaseCapacity": {
+                  "label": "Aumentar capacidad",
+                  "tooltip": "Aumentar la capacidad de un almacén de datos"
+               },
+               "register": {
+                  "label": "Registrar una máquina virtual",
+                  "tooltip": "Registra una máquina virtual existente en el inventario."
+               },
+               "fileBrowser": {
+                  "label": "Explorador de almacenes de datos",
+                  "tooltip": "Permite desplazarse hasta el explorador de archivos en el almacén de datos."
+               },
+               "refresh": {
+                  "label": "Actualizar",
+                  "tooltip": "Actualizar la información del almacén de datos"
+               }
+            }
+         },
+         "list": {
+            "actions": {
+               "upgradeVMFSDatastore": {
+                  "label": "Actualizar",
+                  "tooltip": "Actualizar este almacén de datos a la versión más reciente"
+               },
+               "mountVMFSDatastore": {
+                  "label": "Montar",
+                  "tooltip": "Montar un volumen de VMFS existente como un almacén de datos"
+               },
+               "unmountVMFSDatastore": {
+                  "label": "Desmontar",
+                  "tooltip": "Desmontar el almacén de datos de VMFS"
+               },
+               "mountNFSDatastore": {
+                  "label": "Montar almacén de datos de NFS",
+                  "tooltip": "Montar un recurso compartido de NFS remoto como un almacén de datos"
+               },
+               "createDatastore": {
+                  "label": "Nuevo almacén de datos",
+                  "tooltip": "Crea un almacén de datos nuevo."
+               },
+               "increaseCapacity": {
+                  "label": "Aumentar capacidad",
+                  "tooltip": "Aumentar la capacidad de un almacén de datos"
+               },
+               "actions": {
+                  "label": "Acciones",
+                  "tooltip": "Acciones para objetos seleccionados en la lista."
+               },
+               "fileBrowser": {
+                  "label": "Explorador de almacenes de datos",
+                  "tooltip": "Permite desplazarse hasta el explorador de archivos en el almacén de datos."
+               },
+               "register": {
+                  "label": "Registrar una máquina virtual",
+                  "tooltip": "Registra una máquina virtual existente en el inventario."
+               },
+               "refresh": {
+                  "label": "Actualizar",
+                  "tooltip": "Actualiza la información de la tabla."
+               }
+            },
+            "datagrid": {
+               "name": "Nombre",
+               "driveType": "Tipo de unidad",
+               "capacity": "Capacidad",
+               "provisioned": "Aprovisionado",
+               "free": "Libre",
+               "type": "Tipo",
+               "thin": "Aprovisionamiento fino",
+               "access": "Acceso"
+            },
+            "thinProvisioning": {
+               "supported": "Compatible",
+               "notSupported": "No compatible"
+            },
+            "access": {
+               "multiple": "Varios",
+               "single": "Individual"
+            }
+         },
+         "manage": {
+            "title": "Administrar"
+         },
+         "browser": {
+            "nfs": {
+               "noBrowse": "No se pueden explorar los almacenes de datos de NFS"
+            },
+            "contextMenu": {
+               "deleteFile": {
+                  "label": "Eliminar",
+                  "toolTip": "Eliminar el archivo o directorio"
+               }
+            },
+            "actions": {
+               "inflateDisk": {
+                  "label": "Expandir disco",
+                  "tooltip": "Convertir este disco con aprovisionamiento fino en un disco con aprovisionamiento grueso",
+                  "successNotification": "El disco {{disk}} se expandió correctamente",
+                  "errorNotification": "No se pudo expandir el disco {{disk}}: {{reason}}",
+                  "datastoreCapacity": "Lo sentimos, el tamaño de disco expandido es mayor que el espacio disponible en el almacén de datos. Libere espacio en {{datastoreName}} e inténtelo de nuevo."
+               },
+               "delete": {
+                  "label": "Eliminar",
+                  "tooltip": "Eliminar el archivo o directorio seleccionados actualmente"
+               },
+               "copy": {
+                  "label": "Copiar",
+                  "tooltip": "Copiar el archivo o directorio"
+               },
+               "move": {
+                  "label": "Mover",
+                  "tooltip": "Mover el archivo o directorio"
+               },
+               "download": {
+                  "label": "Descargar",
+                  "tooltip": "Descargar el archivo seleccionado"
+               },
+               "directory": {
+                  "label": "Crear directorio",
+                  "tooltip": "Crear un nuevo directorio"
+               },
+               "upload": {
+                  "label": "Cargar",
+                  "tooltip": "Cargar un archivo al almacén de datos seleccionado"
+               },
+               "refresh": {
+                  "label": "Actualizar",
+                  "tooltip": "Actualizar la vista"
+               }
+            },
+            "dialog": {
+               "defaultTitle": "Explorador de almacenes de datos",
+               "noDatastore": {
+                  "title": "No hay almacenes de datos que explorar",
+                  "content": "No hay almacenes de datos que explorar. Actualmente solo se pueden explorar los almacenes de datos de vSAN y VMFS local."
+               },
+               "select": {
+                  "title": "Seleccionar destino",
+                  "titleFor": "Seleccionar destino para {{name}}",
+                  "move": "Mover",
+                  "copy": "Copiar"
+               },
+               "selectDatastore": {
+                  "title": "Seleccionar un almacén de datos",
+                  "rejectLabel": "Cancelar"
+               },
+               "directory": {
+                  "title": "Nuevo directorio",
+                  "create": "Crear directorio",
+                  "invalidDirectory": "Proporcione un nombre de directorio válido",
+                  "cancel": "Cancelar",
+                  "placeholder": "Nombre de directorio",
+                  "createdIn": "Este directorio se creará en {{location}}/"
+               },
+               "delete": {
+                  "title": "Confirmar eliminación",
+                  "content": "¿Está seguro de que desea eliminar el siguiente archivo o directorio?",
+                  "delete": "Eliminar",
+                  "cancel": "Cancelar"
+               },
+               "upload": {
+                  "inProgress": "{{num}} archivo(s)",
+                  "notEnoughSpace": {
+                     "title": "Espacio insuficiente en el almacén de datos",
+                     "confirmLabel": "Aceptar",
+                     "content": "Espacio insuficiente en {{datastore}} para cargar este archivo. Necesita liberar al menos {{needed}}."
+                  }
+               },
+               "close": "Cerrar",
+               "cancel": "Cancelar"
+            }
+         },
+         "monitor": {
+            "title": "Supervisar",
+            "event": {
+               "datagrid": {
+                  "event": {
+                     "label": "Evento"
+                  },
+                  "time": {
+                     "label": "Hora"
+                  }
+               }
+            },
+            "general": {
+               "title": "General",
+               "desc": "General",
+               "settings": {
+                  "enabled": "vSAN",
+                  "claimingMode": "Modo de reclamación",
+                  "deduplication": "Desduplicación",
+                  "encryption": "Cifrado",
+                  "iscsi": "Servicio iSCSI",
+                  "health": {
+                     "service": "Health Service",
+                     "intervalChecks": "Intervalo de las comprobaciones de estado de mantenimiento"
+                  },
+                  "performance": {
+                     "status": "Servicio de rendimiento",
+                     "statsObjectHealth": "Estado de mantenimiento del objeto de estadísticas",
+                     "statsObjectUuid": "UUID del objeto de estadísticas",
+                     "storagePolicy": "Directiva de almacenamiento",
+                     "complianceStatus": "Estado de cumplimiento"
+                  },
+                  "faultDomain": "Dominio de errores"
+               },
+               "edit": {
+                  "title": "Editar configuración",
+                  "warning": "Si cambia estas opciones, es posible que se produzca un error en la configuración del estado del clúster de vSAN."
+               }
+            },
+            "health": {
+               "noResultsFound": "No se encontraron resultados",
+               "info": "Información"
+            },
+            "actions": {
+               "edit":{
+                  "label": "Editar configuración",
+                  "tooltip": "Editar la configuración de vSAN"
+               },
+               "enableVsan":{
+                  "label": "Habilitar",
+                  "tooltip": "Habilitar"
+               },
+               "refresh":{
+                  "label": "Actualizar",
+                  "tooltip": "Actualizar"
+               }
+            },
+            "task": {
+               "UpdateVsan_Task": {
+                  "success": "La configuración de vSAN del host se ha actualizado correctamente.",
+                  "error": "Se ha producido un error al actualizar la configuración de vSAN del host."
+               }
+            },
+            "common": {
+               "enabled": "Habilitado",
+               "disabled": "Deshabilitado",
+               "yes": "Sí",
+               "no": "No",
+               "ok": "Aceptar",
+               "cancel": "Cancelar",
+               "auto": "Automático",
+               "manual": "Manual",
+               "save": "Guardar",
+               "seconds": "segundos"
+            },
+            "policyStatus": {
+               "compliant" : "Conforme",
+               "nonCompliant" : "No conforme",
+               "notApplicable" : "No aplicable",
+               "unknow" : "Desconocido"
+            },
+            "healthStatus": {
+               "inaccessible": "Inaccesible",
+               "reducedAvailabilityWithNoRebuild": "Disponibilidad reducida sin recompilación",
+               "reducedAvailabilityWithNoRebuildDelayTimer": "Disponibilidad reducida sin temporizador de demora de recompilación",
+               "reducedAvailabilityWithActiveRebuild": "Disponibilidad reducida con recompilación activa",
+               "dataMove": "Datos para mover",
+               "nonAvailabilityRelatedReconfig": "Reconfiguración relacionada con la no disponibilidad",
+               "nonAvailabilityRelatedIncompliance": "Incumplimiento relacionado con la no disponibilidad",
+               "healthy": "Estado de mantenimiento correcto",
+               "unknown": "Desconocido"
+            },
+            "tabs": {
+               "events": {
+                  "label": "Eventos",
+                  "tooltip": "Eventos"
+               },
+               "tasks": {
+                  "label": "Tareas",
+                  "tooltip": "Tareas"
+               },
+               "general": {
+                  "label": "vSAN",
+                  "tooltip": "Configuración general de vSAN"
+               },
+               "hosts": {
+                  "label": "Hosts",
+                  "tooltip": "Hosts que participan en el clúster de vSAN"
+               },
+               "health": {
+                  "label": "Estado de mantenimiento",
+                  "tooltip": "Estado de mantenimiento"
+               }
+            }
+         },
+         "delete": {
+            "label": "Eliminar",
+            "tooltip": "Eliminar el almacén de datos",
+            "confirm": {
+               "title": "Eliminar almacén de datos - {{name}}",
+               "content": "¿Está seguro de que desea eliminar el siguiente almacén de datos?"
+            },
+            "rejectLabel": "Cancelar",
+            "confirmLabel": "Confirmar",
+            "successNotification": "El almacén de datos {{name}} se eliminó correctamente",
+            "failureNotification": "No se pudo eliminar el almacén de datos {{name}}"
+         },
+         "rename": {
+            "dialog": {
+               "title": "Cambiar nombre de almacén de datos",
+               "rejectLabel": "Cancelar",
+               "save": "Guardar",
+               "emptyName": "Nombre vacío",
+               "lengthValidation" : "El nombre del almacén de datos debe tener una longitud de entre {{min}} y {{max}} caracteres, pero la longitud actual es {{actual}}.",
+               "notification": {
+                  "info": "Se cambió el nombre del almacén de datos {{oldName}} a {{newName}}.",
+                  "error": "Error al cambiar el nombre del almacén de datos {{oldName}}: {{localizedMessage}}."
+               }
+            }
+         },
+         "contextMenu": {
+            "rename": {
+               "label": "Cambiar nombre",
+               "tooltip": "Cambiar el nombre del almacén de datos",
+               "tooltipVC": "No se puede cambiar el nombre de los almacenes de datos que se encuentran en hosts administrados por vCenter Server"
+            },
+            "browse": {
+               "label": "Examinar",
+               "toolTip": "Examinar este almacén de datos",
+               "browseDatastores": "Examinar almacenes de datos"
+            },
+            "registerSingle": {
+               "label": "Registrar máquina virtual",
+               "toolTip": "Registrar la máquina virtual"
+            },
+            "register": {
+               "label": "Registrar una máquina virtual",
+               "toolTip": "Registrar una máquina virtual existente de un almacén de datos en el inventario del host"
+            }
+         }
+      },
+      "adapter": {
+         "status": {
+            "online": "En línea",
+            "offline": "Sin conexión",
+            "unbound": "Desenlazar",
+            "unknown": "Desconocido"
+         },
+         "list": {
+            "actions": {
+               "actions": {
+                  "label": "Acciones",
+                  "tooltip": "Acciones para objetos seleccionados en la lista."
+               },
+               "refresh": {
+                  "label": "Actualizar",
+                  "tooltip": "Actualizar la tabla de adaptadores"
+               },
+               "rescan": {
+                  "label": "Volver a examinar",
+                  "tooltipAll": "Volver a examinar todos los adaptadores basados en host para nuevos LUN",
+                  "tooltipOne": "Volver a examinar el adaptador basado en host seleccionado para nuevos LUN"
+               },
+               "iscsi": {
+                  "label": "Configurar iSCSI",
+                  "tooltip": "Configurar iSCSI para este host"
+               },
+               "softwareIscsi": {
+                  "label": "iSCSI de software",
+                  "tooltip": "Configurar iSCSI de software para este host"
+               }
+            },
+            "datagrid": {
+               "name": "Nombre",
+               "model": "Modelo",
+               "status": "Condición",
+               "driver": "Controlador"
+            }
+         },
+         "iscsi": {
+            "title": "Configurar iSCSI: {{adapter}}",
+            "titleNoDevice": "Configurar iSCSI",
+            "confirmLabel": "Guardar configuración",
+            "rejectLabel": "Cancelar",
+            "close": "Cerrar",
+            "configuring": "Configurando",
+            "iscsiEnabled": "iSCSI habilitado",
+            "nameAndAlias": "Nombre y alias",
+            "alias": "Alias",
+            "enabled": "Habilitado",
+            "disabled": "Deshabilitado",
+            "networkPortBindings": "Enlaces de puertos de red",
+            "staticTargets": "Destinos estáticos",
+            "dynamicTargets": "Destinos dinámicos",
+            "authentication": {
+               "chapAuthentication": "Autenticación de CHAP",
+               "mutualChapAuthentication": "Autenticación de CHAP mutua",
+               "name": "Nombre",
+               "secret": "Secreto"
+            },
+            "warnReboot": "Es necesario reiniciar para eliminar el adaptador iSCSI y el módulo de kernel.",
+            "warnNoDevice": "No se encontró ningún adaptador iSCSI; intente cerrar y abrir el cuadro de diálogo de configuración.",
+            "resetAdvancedOption": "Restablecer valores predeterminados",
+            "isInherited": "Heredar del elemento primario",
+            "chapDisabled": "No utilizar CHAP",
+            "chapRequired": "No utilizar CHAP a menos que el destino lo requiera",
+            "chapProhibited": "Utilizar CHAP a menos que el destino lo prohíba",
+            "chapPreferred": "Utilizar CHAP",
+            "noStaticTargets": "No hay destinos estáticos",
+            "noDynamicTargets": "No hay destinos dinámicos",
+            "noPortBindings": "No hay enlaces de puertos",
+            "advancedBlock": {
+               "label": "Configuración avanzada",
+               "expand": "Haga clic para expandir",
+               "maximum": "Máximo",
+               "minimum": "Mínimo",
+               "default": "Valor predeterminado"
+            },
+            "boundPortsGrid": {
+               "vmknic": "NIC de VMkernel",
+               "portgroup": "Grupo de puertos",
+               "ipv4Address": "Dirección IPv4"
+            },
+            "addPort": {
+               "label": "Agregar enlace de puertos",
+               "tooltip": "Agregar un nuevo enlace de puertos",
+               "alreadyBound": {
+                  "title": "Error",
+                  "content": "La NIC de VMkernel {{vmknic}} ya se enlazó a este adaptador iSCSI"
+               }
+            },
+            "removePort": {
+               "label": "Quitar enlace de puertos",
+               "tooltip": "Eliminar el enlace de puertos seleccionado",
+               "inUse": {
+                  "title": "Puerto en uso",
+                  "content": "El puerto {{port}} está en uso actualmente; elimine los destinos que usan esta ruta primero.",
+                  "forceRemove": "Forzar eliminación",
+                  "ok": "Aceptar"
+               }
+            },
+            "staticTargetGrid": {
+               "target": "Destino",
+               "address": "Dirección",
+               "port": "Puerto"
+            },
+            "addStaticTarget": {
+               "label": "Agregar destino estático",
+               "tooltip": "Agregar destino de iSCSI estático",
+               "addName": "Haga clic para agregar un nombre",
+               "addAddress": "Haga clic para agregar una dirección"
+            },
+            "editStaticTarget": {
+               "label": "Editar configuración",
+               "tooltip": "Editar configuración de este destino estático"
+            },
+            "removeStaticTarget": {
+               "label": "Eliminar destino estático",
+               "tooltip": "Eliminar el destino de iSCSI estático seleccionado"
+            },
+            "dynamicTargetGrid": {
+               "address": "Dirección",
+               "port": "Puerto"
+            },
+            "addDynamicTarget": {
+               "label": "Agregar destino dinámico",
+               "tooltip": "Agregar destino de iSCSI dinámico",
+               "addAddress": "Haga clic para agregar una dirección"
+            },
+            "editDynamicTarget": {
+               "label": "Editar configuración",
+               "tooltip": "Editar configuración de este destino dinámico"
+            },
+            "removeDynamicTarget": {
+               "label": "Eliminar destino dinámico",
+               "tooltip": "Eliminar el destino de iSCSI dinámico seleccionado"
+            },
+            "notification": {
+               "success": "iSCSI se configuró correctamente",
+               "failure": "No se pudo configurar iSCSI"
+            }
+         },
+         "iscsi-target": {
+            "title": "Configurar destino de iSCSI: {{target}}",
+            "confirmLabel": "Guardar",
+            "rejectLabel": "Cancelar"
+         },
+         "context": {
+            "rescan": {
+               "title": "Volver a examinar",
+               "tooltip": "Volver a examinar el adaptador basado en host para nuevos LUN"
+            }
+         },
+         "summary": {
+            "alt": "Adaptador",
+            "model": "Modelo",
+            "driver": "Controlador",
+            "pwwn": "Nombre World Wide Name de puerto",
+            "nwwn": "Nombre World Wide Name de nodo",
+            "actions": {
+               "actions": {
+                  "label": "Acciones",
+                  "tooltip": "Acciones para objetos seleccionados en la lista."
+               },
+               "fileBrowser": {
+                  "label": "Explorador de archivos",
+                  "tooltip": "Permite desplazarse hasta el explorador de archivos del adaptador."
+               },
+               "recalculate": {
+                  "label": "Recalcular",
+                  "tooltip": "Recalcula la información de uso del adaptador, incluidos la capacidad y el espacio libre."
+               },
+               "increaseCapacity": {
+                  "label": "Aumentar capacidad",
+                  "tooltip": "Aumenta la capacidad del adaptador."
+               },
+               "manageProviders": {
+                  "label": "Administrar proveedores",
+                  "tooltip": "Administra los proveedores de almacenamiento."
+               },
+               "refresh": {
+                  "label": "Actualizar",
+                  "tooltip": "Actualizar almacén de datos (recalcular espacio utilizado/libre)"
+               }
+            }
+         }
+      },
+      "list": {
+         "title": "Es posible acceder a los siguientes almacenes de datos desde el recurso de destino que se seleccionó. Seleccione el almacén de datos de destino para los archivos de configuración de la máquina virtual y todos sus discos virtuales."
+      },
+      "rename": {
+         "current": "Nombre actual",
+         "new": "Nuevo nombre"
+      }
+   }
+}

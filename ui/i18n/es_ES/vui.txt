@@ -1,0 +1,83 @@
+{
+   "vui": {
+      "ok": "Aceptar",
+      "back": "Atrás",
+      "next": "Siguiente",
+      "finish": "Finalizar",
+      "cancel": "Cancelar",
+      "filter": "Filtrar",
+      "of": "de",
+      "item": "elemento",
+      "items": "elementos",
+      "actionsMenu": {
+         "empty": "Ninguna acción disponible"
+      },
+      "datagrid": {
+         "emptyTable": "No hay elementos para mostrar",
+         "zeroRecords": "No se han encontrado registros coincidentes",
+         "colFilterInfo": "Mostrar elementos con un valor que",
+         "colFilterBooleanInfo": "Mostrar elementos con un valor que sea",
+         "filter": "Filtrar",
+         "clear": "Borrar",
+         "isTrue": "True",
+         "isFalse": "False",
+         "and": "Y",
+         "or": "O",
+         "contains": "Contiene",
+         "eq": "Es igual que",
+         "neq": "No es igual que",
+         "gte": "Mayor o igual que",
+         "gt": "Mayor que",
+         "lte": "Menor o igual que",
+         "lt": "Menos de",
+         "item": "elemento",
+         "items": "elementos",
+         "save": "Aplicar cambios"
+      },
+      "notification": {
+         "defaultTitle": "Notificación"
+      }
+   },
+   "ui": {
+      "preference": {
+         "label": "Preferencias de interfaz de usuario",
+         "theme": {
+            "label": "Tema",
+            "list" : {
+               "default": "Seleccione un tema"
+            },
+            "mode": {
+               "classic": "Clásico",
+               "light": "Claro",
+               "dark": "Oscuro"
+            },
+            "configuration" : {
+               "variable": {
+                  "theme-mode" : "Designe si los iconos son de estilo \"claro\" o \"oscuro\"",
+                  "foreground-text-color" : "Texto principal mostrado",
+                  "foreground-reverse-color" : "Color invertido para el texto que se muestra, también entradas de formulario",
+                  "foreground-highlight-color" : "�?nfasis y resaltado del texto",
+                  "foreground-link-color" : "Hipervínculo y pestaña seleccionada",
+                  "form-accessibility-color" : "Enfoque de accesibilidad",
+                  "item-selected-color" : "Selección del usuario",
+                  "layout-panel-color" : "Sombreado de color común para todos los paneles de diseño",
+                  "layout-scroll-color" : "Color de seguimiento de la barra de desplazamiento",
+                  "background-menu-color" : "Color de fondo de los menús desplegables",
+                  "background-color-1" : "Color degradado superior del marco de fondo de la aplicación",
+                  "background-color-2" : "Color de degradado inferior del marco de fondo de la aplicación"
+               }
+            },
+            "action": {
+               "editor" : "Personalizar..."
+            },
+            "dialog" : {
+               "title" : "Personalizar tema de usuario",
+               "field" : {
+                  "name" : "Nombre del tema"
+               },
+               "warning" : "La modificación de variables de temas puede provocar que el texto sea ilegible."
+            }
+         }
+      }
+   }
+}

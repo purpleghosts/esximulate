@@ -1,0 +1,83 @@
+
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><ul class="dropdown-menu multi-level" id="contextMenu" style="display: block; position: absolute;" ng-style="{
+      &#39;z-index&#39;: 2147483647
+   }" ng-class="{
+      &#39;ng-show&#39;: isOpen,
+      &#39;fade&#39;: fade
+   }" ng-show="isOpen" role="menu">
+
+   <li ng-if="contextMenu.title" class="dropdown-menu-title" id="contextMenuTitle">
+      <span class="{{contextMenu.titleIconClass}}" style="margin-right: 7px;"></span>
+      {{contextMenu.title}}
+      <i class="esx-icon-close-menu" style="float: right; margin-top: 5px;" ng-if="tablet" ng-click="contextMenu.hide()"></i>
+   </li>
+
+   <li ng-repeat="d in contextMenu.structure" title="{{d.toolTip ? d.toolTip : d.title}}" ng-if="!d.hidden" id="{{d.id}}" ng-class="{&#39;highlight&#39;: d.highlight,
+                 &#39;disabled&#39;: !d.enabled,
+                 &#39;divider&#39;: d.divider,
+                 &#39;dropdown-submenu&#39;: d.children &amp;&amp; d.children.length &gt; 0}" role="presentation">
+
+      <a ng-if="!d.divider" ng-click="d.enabled &amp;&amp; d.onClick()" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; d.onClick()" href="https://192.168.1.55/ui/views/context-menu.html" role="menuitem">
+         <span ng-if="d.iconClass" class="{{d.iconClass}}"></span>
+         <span ng-style="{&#39;font-weight&#39;: d.bold ? &#39;bold&#39; : &#39;normal&#39;}">{{d.title}}</span>
+      </a>
+
+      <ul ng-if="d.children.length &gt; 0 &amp;&amp; !d.divider" class="dropdown-menu" ng-class="{&#39;left&#39;: left}">
+
+         <li ng-repeat="dc in d.children" title="{{dc.toolTip ? dc.toolTip : dc.title}}" id="{{dc.id}}" ng-if="!dc.hidden" role="presentation" ng-class="{&#39;highlight&#39;: dc.highlight,
+                       &#39;disabled&#39;: !dc.enabled,
+                       &#39;divider&#39;: dc.divider,
+                       &#39;dropdown-submenu&#39;: dc.children &amp;&amp; dc.children.length &gt; 0}">
+
+            <a ng-if="!dc.divider &amp;&amp; dc.state" ng-click="dc.enabled &amp;&amp; dc.onClick()" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; dc.onClick()" href="https://192.168.1.55/ui/views/context-menu.html" role="menuitem" tabindex="-1">
+               <span ng-if="dc.iconClass" class="{{dc.iconClass}}"></span>
+               <span ng-style="{&#39;font-weight&#39;: dc.bold ? &#39;bold&#39; : &#39;normal&#39;}">{{dc.title}}</span>
+            </a>
+
+            <a ng-if="!dc.divider &amp;&amp; !dc.state" ng-click="dc.enabled &amp;&amp; dc.onClick()" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; dc.onClick()" href="https://192.168.1.55/ui/views/context-menu.html" role="menuitem" tabindex="-1">
+               <span ng-if="dc.iconClass" class="{{dc.iconClass}}"></span>
+               <span ng-style="{&#39;font-weight&#39;: dc.bold ? &#39;bold&#39; : &#39;normal&#39;}">{{dc.title}}</span>
+            </a>
+
+            <ul ng-if="dc.children.length &gt; 0 &amp;&amp; !dc.divider" class="dropdown-menu" ng-class="{&#39;left&#39;: left}">
+
+               <li ng-repeat="dcc in dc.children" title="{{dcc.toolTip ? dcc.toolTip : dcc.title}}" ng-if="!dcc.hidden" id="{{dcc.id}}" role="presentation" ng-class="{&#39;highlight&#39;: dcc.highlight,
+                             &#39;disabled&#39;: !dcc.enabled,
+                             &#39;divider&#39;: dcc.divider,
+                             &#39;dropdown-submenu&#39;: dcc.children &amp;&amp; dcc.children.length &gt; 0}">
+
+                  <a ng-if="!dcc.divider &amp;&amp; dcc.state" ng-click="dcc.enabled &amp;&amp; dcc.onClick()" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; dcc.onClick()" href="https://192.168.1.55/ui/views/context-menu.html" role="menuitem">
+                     <span ng-if="dcc.iconClass" class="{{dcc.iconClass}}"></span>
+                     <span title="{{dcc.toolTip}}" ng-style="{&#39;font-weight&#39;: d.bold ? &#39;bold&#39; : &#39;normal&#39;}">{{dcc.title}}</span>
+                  </a>
+
+                  <a ng-if="!dcc.divider &amp;&amp; !dcc.state" ng-click="dcc.enabled &amp;&amp; dcc.onClick()" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; dcc.onClick()" href="https://192.168.1.55/ui/views/context-menu.html" role="menuitem">
+                     <span ng-if="dcc.iconClass" class="{{dcc.iconClass}}"></span>
+                     <span ng-style="{&#39;font-weight&#39;: dcc.bold ? &#39;bold&#39; : &#39;normal&#39;}" title="{{dcc.toolTip}}">{{dcc.title}}</span>
+                  </a>
+
+                  <ul ng-if="dcc.children.length &gt; 0 &amp;&amp; !dcc.divider" class="dropdown-menu" ng-class="{&#39;left&#39;: left}">
+
+                     <li ng-repeat="dccc in dcc.children" title="{{dccc.toolTip ? dccc.toolTip : dccc.title}}" role="presentation" id="{{dccc.id}}" ng-class="{&#39;highlight&#39;: dccc.highlight,
+                                   &#39;disabled&#39;: !dccc.enabled,
+                                   &#39;divider&#39;: dccc.divider}">
+
+                        <a ng-if="!dccc.divider &amp;&amp; dccc.state" ng-click="dccc.enabled &amp;&amp; dccc.onClick()" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; ddcc.onClick()" href="https://192.168.1.55/ui/views/context-menu.html" role="menuitem">
+                           <span ng-if="dccc.iconClass" class="{{dccc.iconClass}}"></span>
+                           <span ng-style="{&#39;font-weight&#39;: dccc.bold ? &#39;bold&#39; : &#39;normal&#39;}" title="{{dccc.toolTip}}">{{dccc.title}}</span>
+                        </a>
+
+                        <a ng-if="!dccc.divider &amp;&amp; !dccc.state" ng-click="dccc.enabled &amp;&amp; dccc.onClick()" ng-keydown="[13, 32].includes($event.keyCode) &amp;&amp; ddcc.onClick()" href="https://192.168.1.55/ui/views/context-menu.html" role="menuitem">
+                           <span ng-if="dccc.iconClass" class="{{dccc.iconClass}}"></span>
+                           <span ng-style="{&#39;font-weight&#39;: dccc.bold ? &#39;bold&#39; : &#39;normal&#39;}" title="{{dccc.toolTip}}">{{dccc.title}}</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+</ul>
+</body></html>
